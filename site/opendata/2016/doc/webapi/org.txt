@@ -1,0 +1,47 @@
+data.library.sh.cn/jp/organization/上图?key=02cdb77b436d4dc383f1b64ebd86b9dc025622ac
+
+支持简繁体，全，简写。（上图,上海图书馆/上圖，上海圖書館)
+
+
+{
+    "@id": "http://data.library.sh.cn/entity/organization/brvqlrg8y55v1b5q",
+    "@type": "http://www.library.sh.cn/ontology/Organization",
+    "label": [
+        {
+            "@language": "chs",
+            "@value": "上海图书馆"
+        },
+        {
+            "@language": "cht",
+            "@value": "上海圖書館"
+        },
+        {
+            "@language": "en",
+            "@value": "Shanghai library"
+        }
+    ],
+    "abbreviateName": [
+        {
+            "@language": "chs",
+            "@value": "上图"
+        },
+        {
+            "@language": "cht",
+            "@value": "上圖"
+        }
+    ],
+    "address": {
+        "@language": "chs",
+        "@value": "上海市 徐汇区 淮海中路1555号"
+    },
+    "region": "http://data.library.sh.cn/entity/place/ntwya73hddzoeonr",
+    "@context": {
+        "address": "http://www.library.sh.cn/ontology/address",
+        "abbreviateName": "http://www.library.sh.cn/ontology/abbreviateName",
+        "label": "http://bibframe.org/vocab/label",
+        "region": {
+            "@id": "http://www.library.sh.cn/ontology/region",
+            "@type": "@id"
+        }
+    }
+}

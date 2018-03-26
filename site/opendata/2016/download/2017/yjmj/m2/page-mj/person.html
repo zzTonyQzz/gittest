@@ -1,0 +1,53 @@
+<div mui-initfn="initPagePerson" mui-script="person.js">
+<style>
+p[name=dscr] {
+	text-indent: 2em;
+}
+</style>
+	<div class="hd">
+		<a href="javascript:hd_back();" class="icon icon-back"></a>
+		<h2 name="name">名家</h2>
+	</div>
+
+	<div class="bd">
+		<ul class="weui_cells">
+			<li class="weui_cell" dv-show="birthday">
+				<i class="icon icon-year"></i>
+				<label class="weui_cell_hd weui_label">生于</label>
+				<span name="birthday" class="weui_cell_primary right"></span>
+			</li>
+			<li class="weui_cell" dv-show="deathday">
+				<i class="icon icon-year2"></i>
+				<label class="weui_cell_hd weui_label">卒于</label>
+				<span name="deathday" class="weui_cell_primary right"></span>
+			</li>
+			<li class="weui_cell" dv-show="gender">
+				<i class="icon icon-gender"></i>
+				<label class="weui_cell_hd weui_label">性别</label>
+				<span name="gender" class="weui_cell_primary right"></span>
+			</li>
+			<li class="weui_cell" dv-show="speciality">
+				<i class="icon icon-group"></i>
+				<label class="weui_cell_hd weui_label">专长</label>
+				<span name="speciality" class="weui_cell_primary right"></span>
+			</li>
+			<li class="weui_cell">
+				<p name="dscr" class="weui_cell_primary weui_textarea" style="font-size:0.8em"></p>
+			</li>
+			<li class="weui_cell block">
+				<a href="javascript:MjItem.queryKey(MUI.activePage.find('.hd [name]').html())" class="weui_btn weui_btn_primary">搜一搜</a>
+			</li>
+		</ul>
+
+		<div class="weui_cells_title">作品</div>
+		<ul class="weui_cells weui_cells_access">
+			<li dv-for="works" dv-on="liWork_click" class="weui_cell">
+				<i class="icon icon-dscr"></i>
+				<span name="name" class="weui_cell_primary"></span>
+				<span class="weui_cell_ft"></span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+

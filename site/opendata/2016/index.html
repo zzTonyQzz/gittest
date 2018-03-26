@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh-CN"> <!--<![endif]-->
+<head>
+	<title>开放数据应用开发竞赛 | 上海图书馆2016</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="随着大数据时代的来临，开放数据已经成为互联网发展的新趋势。上海图书馆长期关注并致力于开放数据的跟踪、研发和推广，不断尝试探索新的数据服务形式。为配合上海图书馆新近开放的家谱知识库数据服务平台（ http://jp.library.sh.cn/ ），特推出此次开放数据应用开发竞赛活动，面向全社会征集以该平台数据为基础的优秀移动应用产品原型或服务创意，以期更加充分地释放平台中开放数据的价值，最大程度挖掘其背后的应用潜力。">
+	<meta name="author" content="TonyQ">
+
+	<!-- CSS Global Compulsory -->
+	<link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="../../assets/css/app.css">
+	<link rel="stylesheet" href="../../assets/css/blocks.css">
+	<link rel="stylesheet" href="../../assets/css/one.style.css">
+
+
+	<!-- CSS Implementing Plugins -->
+	<link rel="stylesheet" href="../../assets/plugins/animate.css">
+	<link rel="stylesheet" href="../../assets/plugins/line-icons/line-icons.css">
+	<link rel="stylesheet" href="../../assets/plugins/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/plugins/pace-flash.css">
+
+	<!-- CSS Theme -->
+	<link rel="stylesheet" href="assets/css/architecture.style.css">
+
+	<!-- CSS Customization -->
+	<link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body id="body" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery">
+	<!--=== Header ===-->
+	<nav class="one-page-header one-page-header-style-2 navbar navbar-default navbar-fixed-top architecture-nav one-page-nav-scrolling one-page-nav__fixed" role="navigation">
+		<div class="container">
+			<div class="page-scroll">
+				<a class="logo-link navbar-brand logo-left" href="#intro">
+          <img class="default-logo" src="assets/img/logo-light.png" alt="Logo">
+          <img class="shrink-logo" src="assets/img/logo-dark.png" alt="Logo">
+				</a>
+			</div>
+
+			<div class="menu-container page-scroll">
+				<button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="container no-padding-left ">
+				<div class="row collapse navbar-collapse navbar-ex1-collapse">
+					<div class="col-md-5 no-side-padding">
+						<div class="left">
+							<div class="menu-container">
+								<ul class="nav navbar-nav">
+									<li class="page-scroll home">
+										<a href="#notice">公告通知</a>
+									</li>
+									<li class="page-scroll">
+										<a href="#rule">竞赛规则</a>
+									</li>
+									<li class="page-scroll">
+										<a href="#schedule">竞赛日程</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-2 no-side-padding">
+						<div class="center-block logo page-scroll">
+							<a class="logo-link navbar-brand logo-centered" href="#body">
+                <img class="default-logo" src="assets/img/logo-light.png" alt="Logo">
+                <img class="shrink-logo" src="assets/img/logo-dark.png" alt="Logo">
+							</a>
+						</div>
+					</div>
+
+					<div class="col-md-5 no-side-padding">
+						<div class="right">
+							<div class="menu-container">
+								<ul class="nav navbar-nav">
+									<li class="hidden-xs">
+										<a data-toggle="modal" data-target="#myModal3">培训资料</a>
+									</li>
+									<li class="page-scroll">
+										<a href="#opendata">开放数据</a>
+									</li>
+									<li class="page-scroll">
+										<a href="#contact">联系我们</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.container -->
+	</nav>
+	<!--=== End Header ===-->
+	<!-- Promo block BEGIN -->
+	<section class="promo-section">
+		<!-- Fullscreen Static Image BEGIN -->
+		<div class="fullscreen-static-image fullheight">
+			<!-- Promo Content BEGIN -->
+			<div class="container valign__middle">
+				<div class="row">
+					<div class="col-sm-12 text-center-xs g-heading-v7 text-center">
+						<h1 class="h2"><em class="block-name">Shanghai Library</em> 开放数据<br/>应用开发竞赛</h1>
+                        <!--<p><a id="openVIP" class="btn-u btn-u-lg btn-u-bg-default btn-u-upper" style="cursor: pointer; letter-spacing: 2px; background: #3399FF; font-size:14px; font-weight: 800;" data-toggle="modal" data-target="#myModal4">作品提交要求文档（更新）<span class="hot"><img src="http://res.smzdm.com/images/new.png"></span></a></p>-->
+                        <p><a class="btn-u btn-u-lg btn-u-bg-default " style="cursor: pointer; letter-spacing: 2px; background: #3399FF; font-size:14px; font-weight: bold; white-space: normal; word-break: break-word; word-wrap: break-word; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; -moz-box-shadow:2px 2px 5px #333333; -webkit-box-shadow:2px 2px 5px #333333; box-shadow:2px 2px 5px #333333;" href="http://pcrc.library.sh.cn/opendataContestPresentation.html" target="_blank">开放数据2016应用开发竞赛展<br/><small style="letter-spacing: 0px; word-break: break-word; word-wrap: break-word; ">The Best Works Selected from the Open Data Application Development Contest</small><span class="hot"><img src="http://res.smzdm.com/images/new.png"></span></a></p>
+                        
+					</div>
+				</div>
+			</div>
+			<!-- Promo Content END -->
+		</div>
+		<!-- Fullscreen Static Image END -->
+	</section>
+	<!-- Promo block END -->
+	<!-- 获奖作品  -->
+    <section id="awardsSec" class="about-section section-first">
+        <div class="container content-lg">
+            <div class="g-heading-v7 text-center g-mb-70">
+                <h2 class="h2"><em class="block-name">AWARDS</em> 获奖作品</h2>
+            </div>
+            <div class="row content-boxes-v3 awardsList">
+            	<div class="col-md-4">
+                    <i class="icon-custom rounded-x icon-bg-orange fa fa-trophy"></i>
+                    <i class="icon-custom-right">一等奖</i>
+                    <div class="content-boxes-in-v3">
+                        <h2 class="heading-sm">Learn Chinese Surnames<br /><small>by 西交利物浦队</small></h2>
+                        <p>平台：Android</p>
+                        <p>查看demo：<a href="apk/Learn Chinese Surnames .apk" target="_blank"><em>下载apk</em></a></p>
+                        <p style="min-height: 42px;">领队：董行</p>
+                        <a class="button blog-button" href="javascript:void(0);" data-eq="2">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <i class="icon-custom rounded-x icon-bg-orange fa fa-trophy"></i>
+                    <i class="icon-custom-right">二等奖</i>
+                    <div class="content-boxes-in-v3">
+                        <h2 class="heading-sm">靠谱网<br /><small>by 橄澜科技</small></h2>
+                        <p>平台：微站、Android、IOS</p>
+                        <p>查看demo：<a href="https://itunes.apple.com/cn/app/kao-pu-wang-jia-pu/id1118450175?mt=8" target="_blank"><em>下载ios客户端</em></a></p>
+                        <p style="min-height: 42px;">领队：梁健</p>
+                        <a class="button blog-button" href="javascript:void(0);" data-eq="0">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <i class="icon-custom rounded-x icon-bg-orange fa fa-trophy"></i>
+                    <i class="icon-custom-right">二等奖</i>
+                    <div class="content-boxes-in-v3">
+                        <h2 class="heading-sm">家谱信息服务平台<br /><small>by ECNUGISer</small></h2>
+                        <p>平台：微站</p>
+                        <p>查看demo：<a href="http://ecnumap.xyz:122/index.html" target="_blank"><em>demo站点</em></a></p>
+                        <p style="min-height: 42px;">领队：崔用祥</p>
+                        <a class="button blog-button" href="javascript:void(0);" data-eq="1">查看详情</a>
+                    </div>
+                </div>                
+                <div class="col-md-4">
+                    <i class="icon-custom rounded-x icon-bg-orange fa fa-trophy"></i>
+                    <i class="icon-custom-right">入围奖</i>
+                    <div class="content-boxes-in-v3">
+                        <h2 class="heading-sm">时光家谱<br /><small>by 时光寻根</small></h2>
+                        <p>平台：Android、IOS</p>
+                        <p style="min-height: 42px;">领队：刘雄</p>
+                        <a class="button blog-button" href="javascript:void(0);" data-eq="3">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <i class="icon-custom rounded-x icon-bg-orange fa fa-trophy"></i>
+                    <i class="icon-custom-right">入围奖</i>
+                    <div class="content-boxes-in-v3">
+                        <h2 class="heading-sm">“谱渡”家谱续修微网站<br /><small>by 拥抱开放数据</small></h2>
+                        <p>平台：微站</p>
+                        <p style="min-height: 42px;">领队：张永娟</p>
+                        <a class="button blog-button" href="javascript:void(0);" data-eq="4">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <i class="icon-custom rounded-x icon-bg-orange fa fa-trophy"></i>
+                    <i class="icon-custom-right">入围奖</i>
+                    <div class="content-boxes-in-v3">
+                        <h2 class="heading-sm">上图家谱寻根系统<br /><small>by 南京谱牒研究</small></h2>
+                        <p>平台：微站</p>
+                        <p style="min-height: 42px;">领队：林波</p>
+                        <a class="button blog-button" href="javascript:void(0);" data-eq="5">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <i class="icon-custom rounded-x icon-bg-orange fa fa-trophy"></i>
+                    <i class="icon-custom-right">入围奖</i>
+                    <div class="content-boxes-in-v3">
+                        <h2 class="heading-sm">家谱社交平台<br /><small>by 海翼知图谱团队</small></h2>
+                        <p>平台：微站</p>
+                        <p style="min-height: 42px;">领队：丁军</p>
+                        <a class="button blog-button" href="javascript:void(0);" data-eq="6">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <i class="icon-custom rounded-x icon-bg-orange fa fa-trophy"></i>
+                    <i class="icon-custom-right">入围奖</i>
+                    <div class="content-boxes-in-v3">
+                        <h2 class="heading-sm">华夏家谱<br /><small>by Alpha Force</small></h2>
+                        <p>平台：IOS</p>
+                        <p style="min-height: 42px;">领队：李睿哲</p>
+                        <a class="button blog-button" href="javascript:void(0);" data-eq="7">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal popup window -->
+        <div class="modal fade bs-example-modal-lg" id="myModalAwards" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="modal-top margin-bottom-40">
+                        </div>
+                        <div class="modal-bot g-heading-v7">
+                            <h3 class="g-color-white"></h3>
+                            <p class="margin-bottom-30"></p>
+                        </div>
+                    </div>                                                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 获奖作品 END -->
+	<!--竞赛相关 Section-->
+	<section id="notice">
+		<div class="container content-lg">
+			<div class="g-heading-v7 text-center g-mb-70">
+				<h2 class="h2"><em class="block-name">notice</em> 公告通知</h2>
+			</div>
+
+			<!-- all for your comfort blocks -->
+			<div class="row equal-height-columns">
+				<div class="col-md-9 arch-service arch-service-3">
+					<div class="arch-service-in img-hover-3 equal-height-column">
+						<span aria-hidden="true" class="icon-note icon"></span>
+						<h3>公告通知</h3>
+						<p style="line-height:30px; margin-bottom:0px;">1、 <button class="arch-service-btn" data-toggle="modal" data-target="#myModalNotice1" style="font-size: 14px;">2016年4月1日培训通知</button></p>
+						<p style="line-height:30px; margin-bottom:0px;">2、 <button class="arch-service-btn" data-toggle="modal" data-target="#myModalNotice2" style="font-size: 14px;">2016年4月11日开放数据接口说明（更新）</button></p>
+						<p style="line-height:30px; margin-bottom:0px;">3、 <button class="arch-service-btn" data-toggle="modal" data-target="#myModal4" style="font-size: 14px;">2016年4月19日作品提交要求文档（更新）</button></p>                  
+					</div>
+				</div>
+				<!--<div class="col-md-3 arch-service arch-service-2">
+					<div class="arch-service-in img-hover-2 equal-height-column">
+						<span aria-hidden="true" class="icon-loop icon"></span>
+						<h3>竞赛<br>导语</h3>
+						<p>随着大数据时代的来临，开放数据已经成为互联网发展的新趋势。上海图书馆长期关注并致力于开放数据的跟踪、研发和推广，不断尝试探索新的数据服务形式。为配合上海图书馆新近开放的家谱知识库数据服务平台（ <a href="http://jp.library.sh.cn/" target="_blank">http://jp.library.sh.cn/</a> ），特推出此次开放数据应用开发竞赛活动，面向全社会征集以该平台数据为基础的优秀移动应用产品原型或服务创意，以期更加充分地释放平台中开放数据的价值，最大程度挖掘其背后的应用潜力。</p>
+					</div>
+				</div>
+
+				<div class="col-md-3 arch-service arch-service-3">
+					<div class="arch-service-in img-hover-3 equal-height-column">
+						<span aria-hidden="true" class="icon-note icon"></span>
+						<h3>奖项<br>设置</h3>
+						<p>本次竞赛设置一等奖1名，奖金为2万元人民币；二等奖2名，奖金各为1万元人民币；入围奖5名，奖金各为2千元人民币。以上奖金均为含税总额，如有任何纳税义务需由获奖者承担，税额由上海图书馆代扣。</p>
+                        <p>本次竞赛实行回避制度，以示公允，主办方员工不参加评奖。</p>
+					</div>
+				</div>
+
+				<div class="col-md-3 arch-service arch-service-4">
+					<div class="arch-service-in img-hover-4 equal-height-column">
+						<span aria-hidden="true" class="icon-map icon"></span>
+                        <h3>组织<br>单位</h3>
+						<p>本次竞赛活动由上海图书馆（上海科学技术情报研究所）、文化部公共文化研究上海图书馆基地主办。</p>						
+					</div>
+				</div>-->
+				<div class="col-md-3 arch-service arch-service-1">
+					<div class="arch-service-in img-hover-1 equal-height-column">
+						<span aria-hidden="true" class="icon-picture icon"></span>
+						<h3>宣传<br>海报</h3>
+						<p style="overflow: hidden; max-height: 200px;"><img src="assets/img/poster_sm.jpg" /></p>
+						<button class="arch-service-btn" data-toggle="modal" data-target="#myModal">查看完整海报</button>
+					</div>
+				</div>
+                
+                
+			</div>
+			<!-- modal popup window -->
+			<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+							<div class="modal-body">
+							  	<div class="modal-top">
+								   <img src="assets/img/poster.jpg" alt="海报">
+								</div>
+							</div>
+						  </div>
+					</div>
+				</div>
+			</div>
+	</section>
+	<!--End of 竞赛相关 Section-->
+    
+	<!--竞赛规则 Section-->
+	<section id="rule">
+		<div class="container-fluid bg-color-com service-section">
+			<div class="container content-md">
+				<div class="row g-mb-20 g-heading-v7 text-center">
+					<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+						<h2 class="h2 g-color-white g-mb-30"><em class="block-name">rule</em> 竞赛规则</h2>
+						<p class="g-color-white-darker">参赛者提交参赛作品，视为同意以下参赛规则：</p>
+                        <blockquote style="text-align: left;">
+                            <p>1.	参赛作品可为任何形式的移动应用，以微站（移动Web应用）或IOS、Android等平台上的App为主要方式。</p>
+                            <p>2.	参赛团队可由1人或数人组成，其中1至2人负责答辩和演示。参赛团队在报名时须提交真实的个人身份信息，主办方承诺对所有涉及个人隐私的信息予以严格保密，参赛团队报名提交的个人信息仅用于赛事相关程序。</p>
+                            <p>3.	竞赛评奖的主要依据为作品的创新性、可行性、技术含量、交互体验、开放数据利用程度等。</p>
+                            <p>4.	所有竞赛入围作品（含获奖作品）的知识产权归属作者和上海图书馆（上海科学技术情报研究所）双方共有。参赛作品应该为未经发表的原创作品，具有一定的创新性和独特性。</p>
+                            <p>5.	竞赛评委由国家公共文化服务体系建设专家委员会专家，图书情报、计算机、家谱等领域的专家，上海图书馆理事会成员，专业媒体和用户代表等组成。评审分书面审查和现场答辩两个阶段，答辩的具体日期和时间将另行通知。</p>
+                            <p>6.	有以下情况的，主办方可以取消参赛者参赛资格：</p>
+                            <p style="padding-left:2em">a)	违反相关法律、法规；</p>
+                            <p style="padding-left:2em">b)	涉嫌作弊行为，侵犯他人知识产权；</p>
+                            <p style="padding-left:2em">c)	提交的作品缺乏必要的完整性，或有严重缺陷，或涉嫌虚假信息；</p>
+                            <p style="padding-left:2em">d)	提交的作品包含不健康、淫秽、色情或诽谤任何第三方的内容；</p>
+                            <p style="padding-left:2em">e)	提交的作品包含其他主办方认为不适当的内容。</p>
+                            <p>7.	如由于提交的竞赛作品而引起任何法律纠纷，或附带的责任，均由提交作品的参赛团队组成人员个人承担，主办方不承担任何责任。</p>
+                            <p>8.	所有与参赛相关的提交材料均不予退还。主办方有权将参赛作品及相关信息用于制作纸质、音频、视频等形式的宣传品和出版物（传播途径包括互联网），以及举办展览展示活动（展览展示途径包括互联网）等。</p>
+                            <p>9.	评委对作品的评审结果一旦给出即为最终结果，主办方无义务提供任何反馈意见。</p>
+                            <p>10.	主办方保留对该竞赛规则修订的权利，并拥有对竞赛规则的最终解释权。</p>
+                        </blockquote>                        
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!--End of 竞赛规则 Section-->
+
+	<!--Projects Section-->
+	<section id="schedule">
+    	<div class="container content-md g-heading-v7 text-center">
+			<div class="container g-heading-v7 text-center g-mb-70">
+				<h2 class="h2"><em class="block-name">schedule</em> 竞赛日程</h2>
+			</div>
+            <div class="tab-v2">
+                <div class="tab-content">
+                    <ul class="nav nav-tabs">
+                        <li style="cursor: pointer;">
+                		   <a class="tab-2" data-toggle="modal" data-target="#myModal2"><strong>参赛报名</strong><span class="g-color-white-darker">3月16日-3月31日</span><strong>查看详情</strong></a>
+                        </li>
+                        <li style="cursor: pointer;">
+                			<a class="tab-1" data-toggle="modal" data-target="#myModal3"><strong>专业培训</strong><span class="g-color-white-darker">&nbsp;4月1日&nbsp;</span><strong>查看培训资料</strong></a>
+                        </li>
+                        <li class="active" style="cursor: pointer;">
+                			<a class="tab-2" data-toggle="modal" data-target="#myModal4"><strong>作品提交</strong><span class="g-color-white-darker">4月2日-5月16日</span><strong>查看详情</strong></a>
+                        </li>
+                        <li>
+                			<a class="tab-4"><strong>作品评审</strong><span class="g-color-white-darker">5月16日-5月27日</span><strong>&nbsp;</strong></a>
+                        </li>
+                        <li>
+                			<a class="tab-3"><strong>结果发布及颁奖</strong><span class="g-color-white-darker">5月底左右</span><strong>&nbsp;</strong></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+			<!-- modal popup window -->
+            <div class="modal fade bs-example-modal-lg" id="myModalNotice1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-top margin-bottom-40">
+                            </div>
+                            <div class="modal-bot g-heading-v7">
+                                <h2 class="lead text-center" style="color: #FFF;">培训通知<br><small>上海图书馆2016开放数据应用开发竞赛</small></h2>
+                                <h4 style="color: #FFF;"><strong>时间：</strong>4月1日</h4>
+                                <h4 style="color: #FFF;"><strong>地点：</strong>上海图书馆5204，请从上海图书馆西门（淮海中路高安路入口）进</h4>
+                                <p></p>
+                                <h4 style="color: #FFF;"><strong>日程安排：</strong></h4>
+                                <blockquote>
+                                    <p>1.   刘炜：竞赛的初衷、意义、目标等</p>
+                                    <p>2.   张喆昱：解读提交内容及竞赛规则等</p>
+                                    <p>3.   夏翠娟：关联数据、RDF的概念简介，家谱本体词表介绍、本次开放数据的内容</p>
+                                    <p>4.   陈涛：基于关联数据的混搭与整合技术，SPARQL语法及用法，SPARQL endpoint使用案例介绍</p>                
+                                    <p>5.   陈尚松：家谱API调用方法、JSON-LD的处理</p>
+                                    <p>6.   提问答疑</p>
+                                </blockquote>
+                                <h4 style="color: #FFF;"><strong>其他：</strong></h4>
+                                <p><strong>1.	本次培训提供现场直播</strong></p>
+                                <p>直播地址：<a href="http://library.gensee.com/webcast/site/entry/join-3740ec324ba64f2f9119d7d52a848332" title="现场直播" target="_blank">http://library.gensee.com/webcast/site/entry/join-3740ec324ba64f2f9119d7d52a848332</a></p>
+                                <p class="text-center" style="text-indent: 0em;"><img src="assets/img/qr.png" width="300"></p>
+                                <p><strong>2.	本次培训提供午餐</strong></p>
+                                <p></p>
+                            </div>
+                        </div>                                                   
+					</div>
+				</div>
+			</div>
+			<div class="modal fade bs-example-modal-lg" id="myModalNotice2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-top margin-bottom-40">
+                            </div>
+                            <div class="modal-bot g-heading-v7">
+                            	<h2 class="lead text-center" style="color: #FFF;">开放数据接口说明（更新）<br><small>2016年4月11日</small></h2>
+                                <p class="margin-bottom-30" style="text-align: center;"><a href="doc/家谱开放数据接口说明-修订V1.4.docx" target="_blank">点击下载</a></p>
+                            </div>
+                        </div>                                                   
+					</div>
+				</div>
+			</div>
+			<div class="modal fade bs-example-modal-lg" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-top margin-bottom-40">
+                            </div>
+                            <div class="modal-bot g-heading-v7">
+                                <h3 class="g-color-white">参赛报名</h3>
+                                <p class="margin-bottom-30">时间：3月16日-3月31日</p>
+                                <p class="margin-bottom-30">通过 <a href="mailto:opendata@libnet.sh.cn">opendata@libnet.sh.cn</a> 提交 <a href="doc/附件一 报名表.docx" target="_blank">报名表</a></p>
+                            </div>
+                        </div>                                                   
+					</div>
+				</div>
+			</div>
+            <div class="modal fade bs-example-modal-lg" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-top margin-bottom-40">
+                            </div>
+                            <div class="modal-bot g-heading-v7">
+                                <h2 class="lead text-center" style="color: #FFF;">培训资料<br><small>上海图书馆2016开放数据应用开发竞赛</small></h2>
+                                <h4>培训视频回看</h4>
+                                <blockquote>
+                                    <p><a href="http://library.gensee.com/webcast/site/vod/play-4f02865d731044c7a0073d80db3c0c3d" target="_blank" title="培训视频回看">点击回看</a></p>            
+                                </blockquote>
+                                <h4>1、家谱关联开放数据的内容及数据结构</h4>
+                                <blockquote>
+                                    <p>author by 夏翠娟</p>
+                                    <p><a href="doc/开放数据竞赛培训.pptx" target="_blank" title="家谱关联开放数据的内容及数据结构PPT">点击下载培训PPT</a></p>
+                                </blockquote>
+                                <h4>2、SPARQL培训</h4>
+                                <blockquote>
+                                    <p>author by 陈涛</p>
+                                    <p><a href="doc/SPARQL.ppt" target="_blank" title="SPARQL培训PPT">点击下载培训PPT</a></p>
+                                </blockquote>
+                                <h4>3、家谱开放数据接口培训</h4>
+                                <blockquote>
+                                    <p>author by 陈尚松</p>
+                                    <p><a href="doc/家谱开放数据接口培训.pptx" target="_blank" title="家谱开放数据接口培训PPT">点击下载培训PPT</a></p>
+                                    <p>家谱开放数据接口说明：<a href="doc/家谱开放数据接口说明.docx" target="_blank" title="家谱开放数据接口说明WORD">点击下载</a></p>
+                                </blockquote>
+                                <h4>4、家谱开放数据接口说明</h4>
+                                <blockquote>
+                                    <p>2016年4月11日更新</p>
+                                    <p class="margin-bottom-30"><a href="doc/家谱开放数据接口说明-修订V1.4.docx" target="_blank">点击下载</a></p>
+                                </blockquote>
+                                <p></p>
+                                <p></p>                                
+                            </div>
+                        </div>                                                   
+					</div>
+				</div>
+			</div>
+            <div class="modal fade bs-example-modal-lg" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-top margin-bottom-40">
+                            </div>
+                            <div class="modal-bot g-heading-v7">
+                                <h3 class="g-color-white">作品提交</h3>
+                                <p class="margin-bottom-30">时间：4月2日-5月16日</p>
+                                <p class="margin-bottom-30">参赛团队获取数据，开发和完善参赛作品，通过 <a href="mailto:opendata@libnet.sh.cn">opendata@libnet.sh.cn</a> ，根据 <a href="doc/附件二 作品提交内容0419更新.docx" target="_blank">要求（20160419更新）</a> 提交作品</p>
+                            </div>
+                        </div>                                                   
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--End of Projects Section-->
+
+	<!--开放数据内容 Section-->
+	<section id="opendata">
+		<div class="container-fluid bg-color-com team-section">
+			<div class="container content-md g-heading-v7 text-center g-mb-70">
+				<h2 class="h2 g-mb-70 g-color-white"><em class="block-name">Open Data</em> 开放数据内容</h2>
+				<p class="g-color-white-darker" style="text-indent: 2em;text-align:left;">本次开放数据内容主要是上海图书馆馆藏家谱文献信息和内容信息，包括题名，作者，纂修时间，版本信息、姓氏、先祖名人、堂号、谱籍地名（行政区域及地理名称词表）、谱系图（部分）、收藏机构（机构名录数据）等，另有中国历史纪年表与公元纪年对照数据服务等。</p>
+                <p class="g-color-white-darker" style="text-indent: 2em;text-align:left;">开放数据内容可参考上海图书馆家谱知识库平台： <a href="http://jp.library.sh.cn/" target="_blank">http://jp.library.sh.cn/</a></p>
+                <p class="g-color-white-darker" style="text-indent: 2em;text-align:left;">本次竞赛必须以上海图书馆家谱知识库平台中的数据为基础，使用多少，如何使用都不做限制，尤其欢迎融合上海图书馆以外的开放数据，或与其他机构提供的数据服务进行整合。</p>
+			</div>
+		</div>
+	</section>
+	<!--End of 开放数据内容 Section-->
+
+	<!--联系我们 Section-->
+	<section id="contact">
+		<div class="container content-md g-heading-v7 text-center">
+			<h2 class="h2 g-mb-70"><em class="block-name">Contact us</em> 联系我们</h2>
+
+			<!-- form and contatc information -->
+			<div class="row">
+				<!--<div class="col-md-9 col-sm-6 form no-side-padding">
+					
+				</div>-->
+				<div class="col-md-12 col-sm-12 contact-list">
+					<p>张老师<br/>上海图书馆（上海科学技术情报研究所）</p>
+
+					<ul class="list-unstyled margin-bottom-30">
+						<li><span aria-hidden="true" class="icon-call-in icon"></span></li>
+						<li class="first-item">电话</li>
+						<li class="second-item"><a href="tel:021-64334749">021-64334749</a></li>
+					</ul>
+					<ul class="list-unstyled margin-bottom-30">
+						<li><span aria-hidden="true" class="icon-envelope-open icon"></span></li>
+						<li class="first-item">电子邮箱</li>
+						<li class="second-item"><a href="mailto:opendata@libnet.sh.cn">opendata@libnet.sh.cn</a></li>
+					</ul>
+                    
+                    <p>欢迎有意组队参赛的个人或团队函询</p>
+                    
+                    <p><a type="button" class="btn-u btn-u-lg btn-u-bg-default btn-u-upper" href="http://pcrc.library.sh.cn/" target="_self"> 返回&nbsp;&nbsp;文化部公共文化研究基地（上海）&nbsp;&nbsp;首页</button></a>
+
+					<!-- <ul class="list-unstyled margin-bottom-30">
+						<li><span aria-hidden="true" class="icon-earphones-alt icon"></span></li>
+						<li class="first-item">Toll Free</li>
+						<li class="second-item">+4586 802 4581</li>
+					</ul> -->
+				</div>
+			</div>
+		</div>
+		<!-- copyrights -->
+		<div class="copyrights container-fluid bg-color-com page-scroll">
+			<div clas="container">
+				<a class="footer-logo" href="#body">
+					<img class="img-responsive" src="assets/img/logo-light.png" alt="Logo">
+				</a>
+                <div class="info">
+                © copyright 2016 文化部公共文化研究基地（上海）. All rights reserved.
+                </div>
+			</div>
+		</div>
+	</section>
+	<!--End of 联系我们 Section-->
+
+	<!-- JS Global Compulsory -->
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+	<script src="../../assets/plugins/jquery/jquery-migrate.min.js"></script>
+	<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- JS Implementing Plugins -->
+	<script src="../../assets/plugins/smoothScroll.js"></script>
+	<script src="../../assets/plugins/jquery.easing.min.js"></script>
+	<script src="../../assets/plugins/pace/pace.min.js"></script>
+	<script src="../../assets/plugins/modernizr.js"></script>
+	<script src="../../assets/plugins/backstretch/jquery.backstretch.min.js"></script>
+
+	<!-- JS Page Level-->
+	<script src="../../assets/js/one.app.js"></script>
+	<script src="assets/js/plugins/pace-loader.js"></script>
+	<script src="assets/js/plugins/promo.js"></script>
+
+	<script>
+		$(function() {
+			App.init();
+			var awardsJson = [{
+				"name": "靠谱网",
+				"des": "队名：橄澜科技<br />领队：梁健<br />作品名：靠谱网<br />平台：微站、Android、IOS<br />作品简介：靠谱网是一个家谱在线协作编辑平台，以树状图的方式展示谱系图，可用于寻根问祖、家谱修缮、人物查看编辑等；靠谱网支持多人、多团队协作，每个用户均可创建独立的家谱片段，通过“靠谱”操作将自己的家谱片段与该家族的其他家谱相连接；用户也可以邀请亲朋好友组成编辑团队共同修缮；靠谱网同时支持推广、分享功能，吸引更多好友参与进来，形成完整的家谱数据；所有用户均可对某一人物进行评价、参与互动；另外编辑人物时也可将家谱与正史、地方志等各类典籍和权威网站相结合。"				
+			},{
+				"name": "家谱信息服务平台",
+				"des": "队名：ECNUGISer<br />领队：崔用祥<br />作品名：家谱信息服务平台<br />平台：微站<br />作品简介：本系统是基于上海图书馆开放的家谱知识库数据服务接口以及其它多元数据和服务所开发的移动web应用平台，该平台首先对家谱数据中的潜在信息进行了深度挖掘，例如家族的迁徙过程、家族树结构等；另外就是结合使用了GIS的地图服务和数据的空间属性信息，将家谱的空间分布和时间分布分别在地图上进行展示，同时提供对家谱信息的属性查询和空间查询，还有就是关于所有姓氏的家谱统计，在数据量较多的情况下可以实现更多的统计分析；然后考虑到很多人对自己家族的相关知识感兴趣，提供了家族的姓氏起源、家规家训与字辈信息等；最后为了平台后期的维护更新，单独设计了关于平台的问卷调查，这样能够更好的收集用户关于平台的需求和建议，以便后期改进。<br />"
+			},{
+				"name": "Learn Chinese Surnames",
+				"des": "队名：西交利物浦队<br />领队：董行<br />作品名：Learn Chinese Surnames<br />平台：Android<br />作品简介：是一款方便非中文母语人士了解中国姓氏文化和学习汉字的安卓App。App从2013年公布的现代400大姓氏排行出发，展示了用英文描述的关于中国姓氏的起源、名人、早期家谱（年代、地点、馆藏地）以及姓氏的简繁汉字（含义、笔顺、拼音）等信息。用户可以根据拼音字母和姓氏的人口使用排行来浏览现代400大姓氏，学习姓氏汉字的写法、汉字的含义和姓氏的起源，并了解早期家谱的保存情况。本App将上海图书馆家谱知识本体与DBpedia、Wiktionary和GeoNames等知名数据源相关联，并结合其它网络资源，验证了上海图书馆家谱开放数据在世界关联数据云中的潜在语义价值。本项目为上海图书馆的家谱数据走向世界提供了切实可行的思路，也有利于图书馆实现多元化和国际化的公共数据服务。<br />"
+			},{
+				"name": "时光家谱",
+				"des": "队名：时光寻根<br />领队：刘雄<br />作品名：时光家谱<br />平台：Android、IOS<br />作品简介：作品主要给出一个基于互联网的快速（联合）家谱录入和多风格出版平台。另提供了基于手机的家谱出版和宗亲互动App。"
+			},{
+				"name": "“谱渡”家谱续修微网站",
+				"des": "队名：拥抱开放数据<br />领队：张永娟<br />作品名“谱渡”家谱续修微网站<br />平台：微站<br />作品简介：“谱渡”家谱续修微网站是上图家谱系统的延续，用户可以通过该网站，将个人及家人信息转换成关联数据，存储在百科数据中，实现百科人物数据、上图家谱数据两个异源关联数据的整合，同时根据推理规则，实现个人相关家谱推荐及续谱。另外，微网站还实现了基于R语言的分析及可视化。"
+			},{
+				"name": "上图家谱寻根系统",
+				"des": "队名：南京谱牒研究<br />领队：林波<br />作品名：上图家谱寻根系统<br />平台：微站<br />作品简介：刚开始寻根时，不知从哪下手。找亲戚问，找家谱查。一头雾水！<br />能不能找到祖先？能不能寻到根？<br />其实你只要上“上图家谱寻根”就够了。<br />上图家谱，全国最多，<br />家谱世系，研究最早，<br />寻根经验，都老专家，<br />大数据分析，顶尖技术，<br />所以你想要的这里都有，<br />无论你是来看免费家谱的，<br />还是来寻根求助的，<br />或者是查找祖先资料的，<br />甚至是点错了才进来的，<br />都不重要，<br />我们这里就有你需要的。<br />“上图家谱寻根” 微站专门为用户提供在线寻根服务，当用户需要寻根时，可以提交查询，经数据分析，给出用户需要的姓氏、祖源、字辈以及家谱世系信息，帮助用户加快寻根进程，高效、便捷地实现寻根。用户还能参与完善家族家谱世系树，手机修家谱，存储分享影像资料等。<br />"
+			},{
+				"name": "家谱社交平台",
+				"des": "队名：海翼知图谱团队<br />领队：丁军<br />作品名：家谱社交平台<br />平台：微站<br />作品简介：家谱社交平台旨在将蕴含中国宝贵文化的家谱数据和现代人的社交需求进行有机结合。一方面，让人们在使用该社交应用的过程中了解家谱文化，发现家谱数据的价值，并且可以通过贡献自己的数据来进一步完善填充家谱信息；另一方面，利用现有家谱馆藏数据、用户完善数据和用户社交数据等预测发现人物关系和家谱信息，挖掘社交应用潜力。"
+			},{
+				"name": "华夏家谱",
+				"des": "队名：Alpha Force<br />领队：李睿哲<br />作品名：华夏家谱<br />平台：IOS<br />作品简介：寻根问祖，是人类的天然意识；追根溯源，是人类的自愿索求。宗族家谱是一个家族的生命史。它不仅记录着该家族的来源、迁徙的轨迹，还包罗了该家族生息、繁衍、婚姻、文化、族规、家约等历史文化的全过程。<br />然而传统的纸质家谱不易携带、保存和查阅。华夏家谱App可以让用户随身、随时、随地浏览姓氏起源、家族名人、馆藏文献等海量信息。收藏和分享功能可以将自己感兴趣的家族名人和家谱文献通过微信，微博等社交平台分享给亲朋好友。当你想了解自己家族的生命史，探寻先祖的足迹，请拿起手机进入华夏家谱吧。"
+			}];
+			var loadAward = function(eq){
+				$('#myModalAwards .modal-body h3').html(awardsJson[eq]["name"]);
+				$('#myModalAwards .modal-body p').html(awardsJson[eq]["des"]);
+				$('#myModalAwards').modal('show');		
+			};
+			$("a.button.blog-button").on("click",function(){
+				var eq = $(this).data("eq");
+				loadAward(eq);			
+			});
+		});
+	</script>
+	<!--[if lt IE 10]>
+	  <script src="../assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+	<![endif]-->
+</body>
+</html>

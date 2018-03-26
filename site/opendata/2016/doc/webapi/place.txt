@@ -1,0 +1,42 @@
+data.library.sh.cn/jp/place/杞县?key=02cdb77b436d4dc383f1b64ebd86b9dc025622ac
+
+
+{
+    "@id": "http://data.library.sh.cn/entity/place/n5sfke9d88qj3iyp",
+    "@type": "http://www.library.sh.cn/ontology/Place",
+    "label": [
+        {
+            "@language": "chs",
+            "@value": "杞县"
+        },
+        {
+            "@language": "cht",
+            "@value": "杞縣"
+        }
+    ],
+    "city": "开封市",
+    "country": [
+        {
+            "@language": "chs",
+            "@value": "中国"
+        },
+        {
+            "@language": "cht",
+            "@value": "中國"
+        }
+    ],
+    "county": "杞县",
+    "province": "河南省",
+    "sameAs": "http://www.cba.ac.cn/point/410205",
+    "@context": {
+        "country": "http://www.library.sh.cn/ontology/country",
+        "city": "http://www.library.sh.cn/ontology/city",
+        "county": "http://www.library.sh.cn/ontology/county",
+        "sameAs": {
+            "@id": "http://www.w3.org/2002/07/owl#sameAs",
+            "@type": "@id"
+        },
+        "label": "http://bibframe.org/vocab/label",
+        "province": "http://www.library.sh.cn/ontology/province"
+    }
+}

@@ -1,0 +1,99 @@
+<div mui-initfn="initPageHotValue" mui-script="hotValue.js">
+<style>
+</style>
+	<div class="hd">
+		<a href="javascript:hd_back();" class="icon icon-back"></a>
+		<h1>名气指数</h1>
+	</div>
+
+	<div class="bd">
+		<form style="display:none" action="WxUser.set" class="weui_cells" id="frmUserInfo">
+			<li class="weui_cell">
+				<i class="icon icon-year"></i>
+				<label class="weui_cell_hd weui_label">生日</label>
+				<input name="birthDt" class="weui_cell_primary weui_input weui_cell_ft right" required type="date">
+			</li>
+			<li class="weui_cell">
+				<i class="icon icon-book"></i>
+				<label class="weui_cell_hd weui_label">职业</label>
+				<select name="career" required class="weui_cell_primary weui_select weui_cell_ft">
+					<option>技术/科研/教育</option>
+					<option>金融/法律/财会</option>
+					<option>管理</option>
+					<option>销售/服务</option>
+					<option>生产</option>
+					<option>行政/办事</option>
+					<option>其它</option>
+				</select>
+			</li>
+			<li class="weui_cell">
+				<i class="icon icon-address"></i>
+				<label class="weui_cell_hd weui_label">所在地区</label>
+				<input name="city" required placeholder="如上海，北京等" class="weui_cell_primary weui_input weui_cell_ft right">
+			</li>
+			<li class="weui_cell block">
+				<div>
+					<button class="weui_btn weui_btn_primary">看结果</button>
+					<p class="minor center">注意：信息填写后不可修改</p>
+				</div>
+			</li>
+		</form>
+
+		<div class="weui_cells" id="divHotValue" style="display:none">
+			<div class="weui_cell small minor">
+				<div class="weui_cell_primary">名气指数测试</div>
+				<div name="dt" dv-format="dateD">2017-8-1</div>
+			</div>
+			<div class="weui_cell">
+				<img width="80" height="60" src="image-mj/smile.png">
+				<div class="weui_cell_primary" style="margin-left:10px;">
+					<div name="title" style="font-size:1.6em; color: red;">成名立万</div>
+					<div style="font-weight:bold">名气指数：<span name="Hx" style="font-size:1.6em; color: red;">99</span></div>
+				</div>
+			</div>
+			<div class="weui_cell">
+				<div name="dscr" style="font-size:0.8em;">我今天的名气指数为110</div>
+			</div>
+			<div class="weui_cell small minor center block">
+				天赋<span name="val.G"></span>&nbsp;
+				情绪<span name="val.Q"></span>&nbsp;
+				日运<span name="val.H1"></span>&nbsp;
+				月运<span name="val.H2"></span>&nbsp;
+			</div>
+			<div id="divOp" class="weui_cell block">
+				<a type="button" class="weui_btn weui_btn_primary" id="btnMyResult" dv-show="!isMyResult_">我也要测</a>
+				<a href="#dlgMenuShare" class="weui_btn weui_btn_default" id="btnShareTo" dv-if="g_cordova">立即分享</a>
+				<p class="minor sp" dv-if="MUI.isWeixin()">点右上角菜单，立即分享给小伙伴们！</p>
+				<a href="#home" class="weui_btn weui_btn_default" dv-if="MUI.isWeixin()">遇见名家</a>
+			</div>
+		</div>
+
+		<div class="weui_panel" id="divPersons">
+			<div class="weui_panel_hd">推荐名家</div>
+			<div class="weui_panel_bd">
+				<div id="lst1"></div>
+			</div>
+
+			<div class="weui_panel_hd">推荐名作</div>
+			<div class="weui_panel_bd">
+				<div id="lst2"></div>
+			</div>
+
+			<div class="weui_panel_hd">和我相关的名家</div>
+			<div class="weui_panel_bd">
+				<div id="lst3"></div>
+			</div>
+
+			<div class="weui_panel_hd">和我相关的名作</div>
+			<div class="weui_panel_bd">
+				<div id="lst4"></div>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="dlgMenuShare" class="mui-menu">
+		<li id="li1">微信好友</li>
+		<li id="li2">微信朋友圈</li>
+	</div>
+</div>

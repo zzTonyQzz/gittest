@@ -1,0 +1,54 @@
+.weui_cells {
+	border-bottom: 3px solid #f7f3f7;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.minor {
+	font-size: 0.8em;
+	color: #888;
+}
+.minor .icon{
+	margin: 0px 5px;
+}
+.block {
+	display: block;
+}
+
+.mj-item .icon-person {
+	background-image: url("image-mj/male.jpg");
+	background-size: 24px !important;
+	background-position: 0px !important;
+	width: 24px;
+	height: 24px;
+}
+.mj-item .icon-person.female {
+	background-image: url("image-mj/female.jpg");
+}
+.mj-item .name {
+	font-size: 1.2em;
+	color: #ea8010;
+	min-width: 80px;
+}
+.mj-item div[name=speciality] {
+	padding-top: 8px;
+}
+.mj-item .dscr {
+	font-size: 0.8em;
+}
+.mj-item .icon-work {
+	background: url("image-mj/work.jpg");
+	background-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+.mj-item .weui_cell.small {
+	padding: 5px 10px;
+}
+
+.viewMore {
+	color: #888;
+	font-size: 0.8em;
+	text-align: center;
+	border-bottom: 5px solid #f7f3f7;
+}

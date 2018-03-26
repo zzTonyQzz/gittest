@@ -1,0 +1,42 @@
+<div mui-initfn="initPageWork" mui-script="work.js">
+<style>
+p[name=dscr] {
+	text-indent: 2em;
+}
+.subject {
+	font-size: 0.8em;
+}
+</style>
+	<div class="hd">
+		<a href="javascript:hd_back();" class="icon icon-back"></a>
+		<h1>名作</h1>
+	</div>
+
+	<div class="bd">
+		<div class="weui_cells_title center">《<span name="name" class="workName"></span>》</div>
+		<ul class="weui_cells weui_cells_access">
+			<li class="weui_cell">
+				<i class="icon icon-year"></i>
+				<label class="weui_cell_hd weui_label">创作年代</label>
+				<span name="dt" class="weui_cell_primary right"></span>
+			</li>
+			<li class="weui_cell" dv-on="liPerson_click">
+				<i class="icon icon-user"></i>
+				<label class="weui_cell_hd weui_label">作者</label>
+				<span name="personName" class="weui_cell_primary weui_cell_ft"></span>
+			</li>
+			<li class="weui_cell subject" dv-for="subject">
+				<i class="icon icon-dscr"></i>
+				<div name="valueOf()" class="weui_cell_primary weui_textarea"></div>
+			</li>
+			<li class="weui_cell" dv-if="dscr">
+				<p name="dscr" class="weui_cell_primary weui_textarea"></p>
+			</li>
+			<li class="weui_cell block">
+				<a href="javascript:MjItem.queryKey(MUI.activePage.find('.bd .workName').html())" class="weui_btn weui_btn_primary">搜一搜</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+

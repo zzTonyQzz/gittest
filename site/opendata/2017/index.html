@@ -1,0 +1,839 @@
+
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh-CN"> <!--<![endif]-->
+<head>
+	<title>开放数据应用开发竞赛2017 | 上海图书馆</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,, user-scalable=no, maximum-scale=1.0">
+	<meta name="description" content="随着大数据时代的来临，开放数据已经成为互联网发展的新趋势。上海图书馆2016开放数据应用开发竞赛受到社会的广泛关注，共有60个团队141人报名参赛，大家一起探索家谱数据的潜在价值，激发数据创新活力，成为国内图情界在开放数据上的一次有益尝试。除家谱文献外，上海图书馆还藏有一批数量丰富、类型多样的名人手稿及档案，横跨19世纪初至20世纪末近两百年，是研究近现代历史、人文、经济、社会等问题的宝贵资料。今年，我们将继续推出2017开放数据应用开发竞赛活动，面向全社会征集以上图名人手稿及档案开放数据为基础的优秀移动应用产品原型或服务创意，以期更加充分地释放开放数据的价值，最大程度挖掘其背后的应用潜力。">
+	<meta name="author" content="TonyQ">
+
+	<!-- CSS Global Compulsory -->
+	<link rel="stylesheet" href="../../assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../assets/css/app.css">
+	<link rel="stylesheet" href="../../assets/css/blocks.css">
+	<link rel="stylesheet" href="../../assets/css/one.style.css">
+
+
+	<!-- CSS Implementing Plugins -->
+	<link rel="stylesheet" href="../../assets/plugins/animate.css">
+	<link rel="stylesheet" href="../../assets/plugins/line-icons/line-icons.css">
+	<link rel="stylesheet" href="../../assets/plugins/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/plugins/pace-flash.css">
+
+	<!-- CSS Theme -->
+	<link rel="stylesheet" href="assets/css/architecture.style.css">
+
+	<!-- CSS Customization -->
+	<link rel="stylesheet" href="assets/css/pnotify.custom.min.css" media="all" type="text/css" >
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<style>
+		.arch-service-in {
+			padding: 100px 20px;
+			text-align: center !important;
+		}
+	
+	</style>
+</head>
+
+<body id="body" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery">
+	<!--=== Header ===-->
+	<nav class="one-page-header one-page-header-style-2 navbar navbar-default navbar-fixed-top architecture-nav one-page-nav-scrolling one-page-nav__fixed" role="navigation">
+		<div class="container">
+			<div class="page-scroll">
+				<a class="logo-link navbar-brand logo-left" href="#intro">
+          <img class="default-logo" src="assets/img/logo-light.png" alt="Logo">
+          <img class="shrink-logo" src="assets/img/logo-dark.png" alt="Logo">
+				</a>
+			</div>
+
+			<div class="menu-container page-scroll">
+				<button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="container no-padding-left ">
+				<div class="row collapse navbar-collapse navbar-ex1-collapse">
+					<div class="col-md-5 no-side-padding">
+						<div class="left">
+							<div class="menu-container">
+								<ul class="nav navbar-nav">									
+									<li class="page-scroll">
+										<a href="#rule">竞赛规则</a>
+									</li>
+									<li class="page-scroll">
+										<a href="#schedule">竞赛日程</a>
+									</li>
+									<li class="hidden-xs">
+										<a data-toggle="modal" data-target="#myModal-pxzl">培训资料</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-2 no-side-padding">
+						<div class="center-block logo page-scroll">
+							<a class="logo-link navbar-brand logo-centered" href="#body">
+								<img class="default-logo" src="assets/img/logo-light.png" alt="Logo">
+								<img class="shrink-logo" src="assets/img/logo-dark.png" alt="Logo">
+							</a>
+						</div>
+					</div>
+					<div class="col-md-5 no-side-padding">
+						<div class="right">
+							<div class="menu-container">
+								<ul class="nav navbar-nav">
+									
+									<li class="page-scroll">
+										<a href="#opendata">开放数据</a>
+									</li>
+									<li class="page-scroll">
+										<a href="http://pcrc.library.sh.cn/zt/opendata/" target="_blank">往期竞赛</a>
+									</li>
+									<li class="page-scroll">
+										<a href="#contact">联系我们</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.container -->
+	</nav>
+	<!--=== End Header ===-->
+	<!-- Promo block BEGIN -->
+	<section class="promo-section">
+		<!-- Fullscreen Static Image BEGIN -->
+		<div class="fullscreen-static-image fullheight">
+			<!-- Promo Content BEGIN -->
+			<div class="container valign__middle">
+				<div class="row">
+					<div class="col-sm-12 text-center-xs g-heading-v7 text-center">
+						<h1 class="h2"><em class="block-name">Shanghai Library</em> 开放数据<br/>应用开发竞赛<br/>2017</h1>
+                        <p><a class="btn-u btn-u-lg btn-u-bg-default " style="cursor: pointer; letter-spacing: 2px; background: #3399FF; font-size:14px; font-weight: bold; white-space: normal; word-break: break-word; word-wrap: break-word; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; -moz-box-shadow:2px 2px 5px #333333; -webkit-box-shadow:2px 2px 5px #333333; box-shadow:2px 2px 5px #333333;" href="http://pcrc.library.sh.cn/opendataContestPresentation2017.html" target="_blank">开放数据2017应用开发竞赛展<br><small style="letter-spacing: 0px; word-break: break-word; word-wrap: break-word; ">The Best Works Selected from the Open Data Application Development Contest 2017</small><span class="hot"><img src="http://res.smzdm.com/images/new.png"></span></a></p>
+					</div>
+				</div>
+			</div>
+			<!-- Promo Content END -->
+		</div>
+		<!-- Fullscreen Static Image END -->
+	</section>
+	<!-- Promo block END -->
+	<!--竞赛相关 Section-->
+	<section id="notice">
+		<p style="text-align: center; margin-bottom: -40px;">
+			<img src="assets/img/poster.jpg" alt="海报" style="max-width: 80%; width: 1200px;">			
+			<br /><br />
+			<button class="arch-service-btn" data-toggle="modal" data-target="#myModal">查看完整海报</button>
+		</p>
+		
+		<div class="container content-lg">			
+			<!--<div class="g-heading-v7 text-center g-mb-70">
+				<h2 class="h2"><em class="block-name">notice</em>通知</h2>
+			</div>-->
+
+			<!-- all for your comfort blocks -->
+			<div class="row equal-height-columns">
+				<div class="col-md-12 arch-service arch-service-3">
+					<div class="arch-service-in img-hover-3 equal-height-column">
+						<span aria-hidden="true" class="icon-note icon"></span>
+						<h3>通知</h3>
+						<p style="line-height:30px; margin-bottom:0px;">1、 <button class="arch-service-btn" data-toggle="modal" data-target="#myModalNotice9" style="font-size: 14px;">上海图书馆2017开放数据应用开发竞赛分享会通知</button></p>
+						<p style="line-height:30px; margin-bottom:0px;">2、 <button class="arch-service-btn" data-toggle="modal" data-target="#myModalNotice8" style="font-size: 14px;">上海图书馆2017开放数据应用开发竞赛获奖作品揭晓</button></p>
+						<p style="line-height:30px; margin-bottom:0px;">3、 <button class="arch-service-btn" data-toggle="modal" data-target="#myModalNotice7" style="font-size: 14px;">上海图书馆2017开放数据应用开发竞赛人气奖项投票</button></p>
+						<p style="line-height:30px; margin-bottom:0px;">4、 <button class="arch-service-btn" data-toggle="modal" data-target="#myModalNotice6" style="font-size: 14px;">上海图书馆2017开放数据应用开发竞赛人气奖评选规则</button></p>
+						<p style="line-height:30px; margin-bottom:0px;">5、 <button class="arch-service-btn" data-toggle="modal" data-target="#myModalNotice5" style="font-size: 14px;">2017开放数据应用开发竞赛新增人气奖</button></p>  
+						<p style="line-height:30px; margin-bottom:0px;">6、 <button class="arch-service-btn" data-toggle="modal" data-target="#myModalNotice4" style="font-size: 14px;">2017年上海图书馆开放数据应用开发竞赛API说明书</button></p>  
+						<p style="line-height:30px; margin-bottom:0px;">7、 <button class="arch-service-btn" data-toggle="modal" data-target="#myModalNotice3" style="font-size: 14px;">5.10号竞赛培训日程</button></p>   
+						<p style="line-height:30px; margin-bottom:0px;">8、 <button class="arch-service-btn" data-toggle="modal" data-target="#myModalNotice2" style="font-size: 14px;">竞赛 “名人手稿及档案数据本体”已发布</button></p>    
+						<p style="line-height:30px; margin-bottom:0px;">9、 <button class="arch-service-btn" data-toggle="modal" data-target="#myModalNotice1" style="font-size: 14px;">上海图书馆2017开放数据应用开发竞赛公告</button></p>              
+					</div>
+				</div>
+				<!--<div class="col-md-3 arch-service arch-service-1">
+					<div class="arch-service-in img-hover-1 equal-height-column">
+						<span aria-hidden="true" class="icon-picture icon"></span>
+						<h3>宣传<br>海报</h3>
+						<p style="overflow: hidden; max-height: 200px;"><img src="assets/img/poster_sm.jpg" /></p>
+						<button class="arch-service-btn" data-toggle="modal" data-target="#myModal">查看完整海报</button>
+					</div>
+				</div>-->
+			</div>
+			<!-- modal popup window -->
+			<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+							<div class="modal-body">
+							  	<div class="modal-top">
+								   <img src="assets/img/poster.jpg" alt="海报">
+								</div>
+							</div>
+						  </div>
+					</div>
+				</div>
+			</div>
+	</section>
+	<!--End of 竞赛相关 Section-->
+    
+	<!--竞赛规则 Section-->
+	<section id="rule">
+		<div class="container-fluid bg-color-com service-section">
+			<div class="container content-md">
+				<div class="row g-mb-20 g-heading-v7 text-center">
+					<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+						<h2 class="h2 g-color-white g-mb-30"><em class="block-name">rule</em> 竞赛规则</h2>
+						<p class="g-color-white-darker">参赛者提交参赛作品，视为同意以下参赛规则：</p>
+                        <blockquote style="text-align: left;" >
+							<p class="g-color-white-darker">1.	参赛作品可为任何形式的移动应用，以微站（移动Web应用）或IOS、Android等平台上的App为主要方式。</p>
+							<p class="g-color-white-darker">2.	参赛团队可由1人或数人组成，其中1至2人负责答辩和演示。参赛团队在报名时须提交真实的个人身份信息，主办方承诺对所有涉及个人隐私的信息予以严格保密，参赛团队报名提交的个人信息仅用于赛事相关程序。参赛团队名单以在官网上提交的报名表为准，不予更改。</p>
+							<p class="g-color-white-darker">3.	竞赛评奖的主要依据为作品的创新性、可行性、技术含量、交互体验、开放数据利用程度等。</p>
+							<p class="g-color-white-darker">4.	所有竞赛入围作品（含获奖作品）的知识产权归属作者和上海图书馆（上海科学技术情报研究所）双方共有。参赛作品应该为未经发表的原创作品，具有一定的创新性和独特性。</p>
+							<p class="g-color-white-darker">5.	竞赛评委由国家公共文化服务体系建设专家委员会专家，图书情报、计算机等领域的专家，上海图书馆理事会成员，专业媒体和用户代表等组成。评审分书面审查和现场答辩两个阶段，答辩的具体日期和时间将另行通知。</p>
+							<p class="g-color-white-darker">6.	有以下情况的，主办方可以取消参赛者参赛资格：</p>
+							<p class="g-color-white-darker" style="padding-left:2em">a)	违反相关法律、法规；</p>
+							<p class="g-color-white-darker" style="padding-left:2em">b)	涉嫌作弊行为，侵犯他人知识产权；</p>
+							<p class="g-color-white-darker" style="padding-left:2em">c)	提交的作品缺乏必要的完整性，或有严重缺陷，或涉嫌虚假信息；</p>
+							<p class="g-color-white-darker" style="padding-left:2em">d)	提交的作品包含不健康、淫秽、色情或诽谤任何第三方的内容；</p>
+							<p class="g-color-white-darker" style="padding-left:2em">e)	提交的作品包含其他主办方认为不适当的内容。</p>
+							<p class="g-color-white-darker">7.	如由于提交的竞赛作品而引起任何法律纠纷，或附带的责任，均由提交作品的参赛团队组成人员个人承担，主办方不承担任何责任。</p>
+							<p class="g-color-white-darker">8.	所有与参赛相关的提交材料均不予退还。主办方有权将参赛作品及相关信息用于制作纸质、音频、视频等形式的宣传品和出版物（传播途径包括互联网），以及举办展览展示活动（展览展示途径包括互联网）等。</p>
+							<p class="g-color-white-darker">9.	本次竞赛实行回避制度，以示公允，主办方员工不参加评奖。评委对作品的评审结果一旦给出即为最终结果，主办方无义务提供任何反馈意见。</p>
+							<p class="g-color-white-darker">10.	主办方保留对该竞赛规则修订的权利，并拥有对竞赛规则的最终解释权。</p>
+                        </blockquote>                        
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!--End of 竞赛规则 Section-->
+
+	<!--Projects Section-->
+	<section id="schedule">
+    	<div class="container content-md g-heading-v7 text-center">
+			<div class="container g-heading-v7 text-center g-mb-70">
+				<h2 class="h2"><em class="block-name">schedule</em> 竞赛日程</h2>
+			</div>
+            <div class="tab-v2">
+                <div class="tab-content">
+                    <ul class="nav nav-tabs">
+                        <li>
+                		   <a class="tab-2" style="cursor: default;"><strong>参赛报名</strong><span class="g-color-white-darker">4月1日-4月30日</span><strong>参赛团队通过竞赛官方网站报名<br/><span style="color: #CCCCCC;">报名已截至</span></strong></a>
+                        </li>
+                        <li class="active">
+                			<a class="tab-1" style="cursor: pointer;" data-toggle="modal" data-target="#myModal-pxzl"><strong>专业培训</strong><span class="g-color-white-darker">&nbsp;5月10日&nbsp;</span><strong>主办方为参赛团队开展名人手稿和档案数据接口方面的解读及培训</strong></a>
+                        </li>
+                        <li>
+                			<a class="tab-2" style="cursor: pointer;" href="http://pcrc.library.sh.cn/zt/opendata/2017/result/" target="_blank"><strong>作品提交</strong><span class="g-color-white-darker">7月11日-8月11日</span><strong>参赛团队通过竞赛官方网站提交作品<br/><span style="text-decoration: underline;">提交入口</span></strong></a>
+                        </li>
+                        <li class="active">
+                			<a class="tab-4" style="cursor: default;"><strong>作品评审</strong><span class="g-color-white-darker">8月中旬-9月上旬</span><strong>&nbsp;<br/>&nbsp;</strong></a>
+                        </li>
+                        <li>
+                			<a class="tab-3" style="cursor: default;"><strong>结果发布及颁奖</strong><span class="g-color-white-darker">9月上旬</span><strong>&nbsp;<br/>&nbsp;</strong></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+			<!-- modal popup window -->
+           <!-- modal 公告 -->
+            <div class="modal fade bs-example-modal-lg" id="myModalNotice1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-top margin-bottom-40">
+                            </div>
+                            <div class="modal-bot g-heading-v7">
+                            	<h2 class="lead text-center" style="color: #FFF;">上海图书馆2017<br />开放数据应用开发竞赛公告<br><small>2017.3.15</small></h2>
+
+								<p>
+									<strong>一、 目的</strong></p>
+								<p style="text-indent: 2em;">
+									  随着大数据时代的来临，开放数据已经成为互联网发展的新趋势。上海图书馆2016开放数据应用开发竞赛受到社会的广泛关注，共有60个团队141人报名参赛，大家一起探索家谱数据的潜在价值，激发数据创新活力，成为国内图情界在开放数据上的一次有益尝试。</p>
+								<p style="text-indent: 2em;">
+									  除家谱文献外，上海图书馆还藏有一批数量丰富、类型多样的名人手稿及档案，横跨19世纪初至20世纪末近两百年，是研究近现代历史、人文、经济、社会等问题的宝贵资料。今年，我们将继续推出2017开放数据应用开发竞赛活动，面向全社会征集以上图名人手稿及档案开放数据为基础的优秀移动应用产品原型或服务创意，以期更加充分地释放开放数据的价值，最大程度挖掘其背后的应用潜力。</p>
+								<p style="text-indent: 2em;">
+									<strong>大家一起来，更精彩！</strong></p>
+								<p>
+									<strong>二、 日程</strong></p>
+								<p>
+									  1. 参赛报名</p>
+								<p style="text-indent: 2em;">
+									  时间：4月1日-4月30日</p>
+								<p style="text-indent: 2em;">
+									  参赛团队通过竞赛官方网站报名。</p>
+								<p>
+									  2. 专业培训</p>
+								<p style="text-indent: 2em;">
+									  时间：5月10日</p>
+								<p style="text-indent: 2em;">
+									  主办方为参赛团队开展名人手稿和档案数据接口方面的解读及培训。</p>
+								<p>
+									  3. 作品提交</p>
+								<p style="text-indent: 2em;">
+									  时间：7月11日-8月11日</p>
+								<p style="text-indent: 2em;">
+									  参赛团队通过竞赛官方网站提交作品。</p>
+								<p>
+									  4. 作品评审</p>
+								<p style="text-indent: 2em;">
+									  时间：8月中旬-9月上旬</p>
+								<p>
+									  5. 结果发布及颁奖</p>
+								<p style="text-indent: 2em;">
+									  时间：9月上旬</p>
+								<p style="text-indent: 2em;">
+									  此次竞赛各项日程及通知都将公布在竞赛官方网站（http://pcrc.library.sh.cn/zt/opendata/2017）及文化部公共文化研究上海图书馆基地官方微信/微博上，请各位参赛者及时关注。</p>
+								<p>
+									<strong>三、 开放数据内容</strong></p>
+								<p style="text-indent: 2em;">
+									  本次开放数据内容为上海图书馆馆藏的24万余种手稿及档案的元数据。包括私人信函电报12万余通，珍贵的创作手稿1万7千余种，谕旨奏折公牍条约1万4千余种，合同章程4千余种，照片及音像资料1万8千余种，等等。涉及名人近5万、地点2千余个。</p>
+								<p style="text-indent: 2em;">
+									  本次竞赛必须以上海图书馆名人手稿及档案开放数据为基础，使用多少，如何使用都不做限制，尤其欢迎融合上海图书馆以外的开放数据，或与其他机构提供的数据服务进行整合。</p>
+								<p>
+									<strong>四、 规则</strong></p>
+								<p style="text-indent: 2em;">
+									  参赛者提交参赛作品，视为同意以下参赛规则：</p>
+								<p style="text-indent: 2em;">
+									  1. 参赛作品可为任何形式的移动应用，以微站（移动Web应用）或IOS、Android等平台上的App为主要方式。</p>
+								<p style="text-indent: 2em;">
+									  2. 参赛团队可由1人或数人组成，其中1至2人负责答辩和演示。参赛团队在报名时须提交真实的个人身份信息，主办方承诺对所有涉及个人隐私的信息予以严格保密，参赛团队报名提交的个人信息仅用于赛事相关程序。参赛团队名单以在官网上提交的报名表为准，不予更改。</p>
+								<p style="text-indent: 2em;">
+									  3. 竞赛评奖的主要依据为作品的创新性、可行性、技术含量、交互体验、开放数据利用程度等。</p>
+								<p style="text-indent: 2em;">
+									  4. 所有竞赛入围作品（含获奖作品）的知识产权归属作者和上海图书馆（上海科学技术情报研究所）双方共有。参赛作品应该为未经发表的原创作品，具有一定的创新性和独特性。</p>
+								<p style="text-indent: 2em;">
+									  5. 竞赛评委由国家公共文化服务体系建设专家委员会专家，图书情报、计算机等领域的专家，上海图书馆理事会成员，专业媒体和用户代表等组成。评审分书面审查和现场答辩两个阶段，答辩的具体日期和时间将另行通知。</p>
+								<p style="text-indent: 2em;">
+									  6. 有以下情况的，主办方可以取消参赛者参赛资格：</p>
+								<p style="text-indent: 4em;">
+									  a) 违反相关法律、法规；</p>
+								<p style="text-indent: 4em;">
+									  b) 涉嫌作弊行为，侵犯他人知识产权；</p>
+								<p style="text-indent: 4em;">
+									  c) 提交的作品缺乏必要的完整性，或有严重缺陷，或涉嫌虚假信息；</p>
+								<p style="text-indent: 4em;">
+									  d) 提交的作品包含不健康、淫秽、色情或诽谤任何第三方的内容；</p>
+								<p style="text-indent: 4em;">
+									  e) 提交的作品包含其他主办方认为不适当的内容。</p>
+								<p style="text-indent: 2em;">
+									  7. 如由于提交的竞赛作品而引起任何法律纠纷，或附带的责任，均由提交作品的参赛团队组成人员个人承担，主办方不承担任何责任。</p>
+								<p style="text-indent: 2em;">
+									  8. 所有与参赛相关的提交材料均不予退还。主办方有权将参赛作品及相关信息用于制作纸质、音频、视频等形式的宣传品和出版物（传播途径包括互联网），以及举办展览展示活动（展览展示途径包括互联网）等。</p>
+								<p style="text-indent: 2em;">
+									  9. 本次竞赛实行回避制度，以示公允，主办方员工不参加评奖。评委对作品的评审结果一旦给出即为最终结果，主办方无义务提供任何反馈意见。</p>
+								<p style="text-indent: 2em;">
+									  10. 主办方保留对该竞赛规则修订的权利，并拥有对竞赛规则的最终解释权。</p>
+								<p>
+									<strong>五、 奖项设置</strong></p>
+								<p style="text-indent: 2em;">
+									  本次竞赛设置一等奖1名，奖金为2万元人民币；二等奖2名，奖金各为1万元人民币；入围奖5名，奖金各为2千元人民币。以上奖金均为含税总额，如有任何纳税义务需由获奖者承担，税额由上海图书馆代扣。</p>
+								<p>
+									<strong>六、 组织单位</strong></p>
+								<p style="text-indent: 2em;">
+									  本次竞赛活动由上海图书馆（上海科学技术情报研究所）、文化部公共文化研究上海图书馆基地主办。</p>
+								<p>
+									<strong>七、 联系方式</strong></p>
+								<p style="text-indent: 2em;">
+									  上海图书馆（上海科学技术情报研究所）张老师</p>
+								<p style="text-indent: 2em;">
+									  电话：021-64281593</p>
+								<p style="text-indent: 2em;">
+									  电子邮箱：zyzhang@libnet.sh.cn</p>
+								<p style="text-indent: 2em;">
+									  欢迎有意组队参赛的个人或团队函询。</p>                               
+                               
+                                <p class="margin-bottom-30" style="text-align: center; font-size: 1.5em;"><a href="doc/上海图书馆2017开放数据应用开发竞赛公告.docx" target="_blank">点击下载word版公告</a></p>
+                            </div>
+                        </div>                                                   
+					</div>
+				</div>
+			</div>
+			<div class="modal fade bs-example-modal-lg" id="myModalNotice2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-top margin-bottom-40">
+                            </div>
+                            <div class="modal-bot g-heading-v7">
+                            	<h2 class="lead text-center" style="color: #FFF;">竞赛 “名人手稿及档案数据本体”已发布<br><small>2017.4.26</small></h2>
+								<p style="text-indent: 2em;">2017开放数据应用开发竞赛“名人手稿及档案数据本体”已发布，详细内容请查看 <a href="http://sg.library.sh.cn/ontology/view" target="_blank">http://sg.library.sh.cn/ontology/view</a></p>
+								<pre style="padding: 2em; margin: 2em; text-align: left;">
+网站为上海图书馆“人名规范库”和“名人手稿及档案及档案知识库”所用的本体词表。<br>
+提供三种视图模式供用户浏览：模型视图（Model View）、类视图（Class View）和列表视图（List View）。<br>
+模型视图（Model View）：可视化地展示手稿及档案本体类和属性间的关系。<br>
+类视图（Class View）：通过父类和子类的层级关系展示类和属性。<br>
+列表视图（List View）：按照名称首字母顺序排列展示类和属性。<br>
+            					</pre>
+                            </div>
+                        </div>                                                   
+					</div>
+				</div>
+			</div>
+			<div class="modal fade bs-example-modal-lg" id="myModalNotice3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-top margin-bottom-40">
+                            </div>
+                            <div class="modal-bot g-heading-v7">
+                            	<h2 class="lead text-center" style="color: #FFF;">上海图书馆2017开放数据应用开发竞赛培训日程<br><small>2017.4.27</small></h2>         
+								<p style="text-indent: 2em;"><strong>时间：</strong>5月10日</p>     
+								<p style="text-indent: 2em;"><strong>地点：</strong>上海图书馆5304，请从上海图书馆西门（淮海中路高安路入口）进</p>  
+								<p style="text-indent: 2em;"><strong>日程安排：</strong></p>
+								<div style="padding-left: 2em;">
+								<p style="text-indent: 2em;"><strong>1. 9:00签到</strong></p>
+								<p style="text-indent: 2em;"><strong>2. 9:30-12:00（集体讲解）</strong></p>
+								<p style="text-indent: 4em;">1) 上海图书馆副馆长 刘炜</p>
+								<p style="text-indent: 5em;">《竞赛的背景意义及目标》</p>
+								<p style="text-indent: 4em;">2) 上海图书馆公共数字文化研究中心助理工程师 张喆昱</p>
+								<p style="text-indent: 5em;">《竞赛规则及作品提交要求解读》</p>  
+								<p style="text-indent: 4em;">3) 上海图书馆系统网络中心高级工程师 夏翠娟</p>  
+								<p style="text-indent: 5em;">《数据开放内容及数据结构》</p>
+								<p style="text-indent: 4em;">4) 数字人文项目开发工程师 李一斌</p>
+								<p style="text-indent: 5em;">《数据加工转换工具的使用》</p>
+								<p style="text-indent: 4em;">5) 数字人文项目开发工程师 陈尚松</p>
+								<p style="text-indent: 5em;">《数据开放接口的调用》</p>
+								<p style="text-indent: 2em;"><strong>3. 13: 30-15:30（讨论交流）</strong></p>
+								<p style="text-indent: 4em;">形式：问题答疑</p>             
+								</div>
+								<p style="text-indent: 2em;"><strong>其他：</strong></p>
+								<div style="padding-left: 2em;">
+								<p style="text-indent: 2em;"><strong>本次培训集体讲解部分提供现场直播，并支持线上提问</strong></p>
+								<p style="text-indent: 2em;">直播地址（5.10日当天开启直播）</p>
+								<p style="text-indent: 2em;"><a href="http://library.gensee.com/webcast/site/entry/join-a7cf039c33de47f7be516a8b27968ead" target="_blank">http://library.gensee.com/webcast/site/entry/join-a7cf039c33de47f7be516a8b27968ead</a></p>
+								<p style="text-align: center;" class="text-center hasimg"><img src="../../../image/news/new013.jpg" /></p> 
+								<p style="text-align: center;" class="text-center"><small>扫描二维码观看直播</small></p>
+								</div>
+								<p>&nbsp;</p> 
+                            </div>
+                        </div>                                                   
+					</div>
+				</div>
+			</div>
+			<div class="modal fade bs-example-modal-lg" id="myModalNotice4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-top margin-bottom-40">
+                            </div>
+                            <div class="modal-bot g-heading-v7">
+                            	<h2 class="lead text-center" style="color: #FFF; word-break: break-all; word-wrap: break-word;">2017年上海图书馆开放数据应用开发竞赛<br/>API说明书<br><small>2017.5.9</small></h2>
+								<h1 class="g-color-white-darker" style="text-align: center;line-height: 100px;"><a href="doc/2017年上海图书馆开放数据应用开发竞赛API说明书.pdf" target="_blank">点击下载</a></h1>
+                            </div>
+                        </div>                                                   
+					</div>
+				</div>
+			</div>
+			<div class="modal fade bs-example-modal-lg" id="myModalNotice5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-top margin-bottom-40">
+                            </div>
+                            <div class="modal-bot g-heading-v7">
+                            	<h2 class="lead text-center" style="color: #FFF; word-break: break-all; word-wrap: break-word;">2017开放数据应用开发竞赛新增人气奖<br/><small>2017.7.20</small></h2>
+								<p style="text-indent: 2em;">最新消息！为了激发大家的创作热情、提高参与度、聚集更多人气，除本次竞赛设置的一等奖、二等奖及入围奖之外，主办方还将增设人气奖评选活动。该评选活动将于微信平台上由大众投票产出。具体奖项评选规则将于8月中下旬在竞赛官网公布，请大家密切关注！</p>
+                            </div>
+                        </div>                                                   
+					</div>
+				</div>
+			</div>
+			<div class="modal fade bs-example-modal-lg" id="myModalNotice6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-top margin-bottom-40">
+                            </div>
+                            <div class="modal-bot g-heading-v7">
+                            	<h2 class="lead text-center" style="color: #FFF; word-break: break-all; word-wrap: break-word;">上海图书馆2017开放数据应用开发竞赛<br/>人气奖评选<br/><small>2017.8.16</small></h2>
+								<p style="text-indent: 2em;">为了扩大上海图书馆2017开放数据应用开发竞赛的宣传及提升影响力，让大众充分了解上海图书馆本次开放的名人手稿及档案数据及各种创意，本次竞赛增设最佳人气奖1名，人气奖7名，共8名，颁发奖牌及奖状。</p>
+								<p style="text-indent: 2em;"><strong>规则如下：</strong></p>
+                           		<p style="text-indent: 4em;">1.	初审合格的作品都可参加本次人气奖项（最佳人气奖、人气奖）的投票评选；</p>
+                           		<p style="text-indent: 4em;">2.	投票页面的作品排序顺序以作品提交时间先后为准；</p>
+                           		<p style="text-indent: 4em;">3.	每个微信号每天最多可投8个作品；</p>
+                           		<p style="text-indent: 4em;">4.	拒绝虚假及违反竞赛规则类信息的传播，主办方将对投票进行监控，对非正常情况酌情进行处理；</p>
+                           		<p style="text-indent: 4em;">5.	投票结束后，主办方将根据已审核的最终票数数据评选出最佳人气奖1个、人气奖7个并于9月与2017开放数据应用开发竞赛其他奖项一同颁奖。</p>
+                           		<p style="text-indent: 4em;">6.	人气奖项（最佳人气奖、人气奖）独立于原竞赛一等奖、二等奖及入围奖。</p>
+                           		<p style="text-indent: 4em;">7.	主办方保留对本次活动的最终解释权。</p>
+                           		<p style="text-indent: 4em;"></p>
+                            </div>
+                        </div>                                                   
+					</div>
+				</div>
+			</div>
+			<div class="modal fade bs-example-modal-lg" id="myModalNotice7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-top margin-bottom-40">
+                            </div>
+                            <div class="modal-bot g-heading-v7">
+                            	<h2 class="lead text-center" style="color: #FFF; word-break: break-all; word-wrap: break-word;">上海图书馆2017开放数据应用开发竞赛<br/>人气奖项投票<br/><small>2017.8.23</small></h2>
+								<p style="text-indent: 2em;">春播秋收90天，等你来呈现最完美的作品。2017开放数据应用开发竞赛已进入激烈的冲刺阶段。接下来的10天，我们将借这个平台和你们一起分享参赛者关于名人手稿与档案开放数据的作品和创意。你觉得哪个作品最能吸引你？哪个作品更能体现名人手稿及档案的价值？快点击扫描二维码，为你最喜爱的作品投票吧！我们将根据你们的投票，选出最佳人气奖1名、人气奖7名，结果将于9月与竞赛其他奖项一同公布。</p>
+								<p class="text-center hasimg" style="text-align: center;"><img src="../../../image/news/new017.png" style="max-width: 200px;"></p>
+								<p style="text-indent: 2em;"><strong>评选时间： 8月24号-9月2号</strong></p>
+								<p style="text-indent: 2em;"><strong>评选规则：</strong></p>
+								<p style="text-indent: 4em;">1.	初审合格的作品都可参加本次人气奖项（最佳人气奖、人气奖）的投票评选；</p>
+								<p style="text-indent: 4em;">2.	投票页面的作品排序顺序以作品提交时间先后为准；</p>
+								<p style="text-indent: 4em;">3.	每个微信号每天最多可投8个作品；</p>
+								<p style="text-indent: 4em;">4.	拒绝虚假及违反竞赛规则类信息的传播，主办方将对投票进行监控，对非正常情况酌情进行处理；</p>
+								<p style="text-indent: 4em;">5.	投票结束后，主办方将根据已审核的最终票数数据评选出最佳人气奖1名、人气奖7名，并于9月与2017开放数据应用开发竞赛其他奖项一同颁奖。</p>
+								<p style="text-indent: 4em;">6.	人气奖项（最佳人气奖、人气奖）独立于原竞赛一等奖、二等奖及入围奖。</p>
+								<p style="text-indent: 4em;">7.	主办方保留对本次活动的最终解释权。</p>
+								<p>&nbsp;</p> 
+                            </div>
+                        </div>                                                   
+					</div>
+				</div>
+			</div>
+			<div class="modal fade bs-example-modal-lg" id="myModalNotice8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-top margin-bottom-40">
+                            </div>
+                            <div class="modal-bot g-heading-v7">
+                            	<h2 class="lead text-center" style="color: #FFF; word-break: break-all; word-wrap: break-word;">上海图书馆2017开放数据应用开发竞赛<br/>获奖作品揭晓<br/><small>2017.9.19</small></h2>
+								<p style="text-indent: 2em;">一等奖</p>
+								<p style="text-indent: 4em;">随机森林《名人印象》</p>
+								<p style="text-indent: 2em;">二等奖</p>
+								<p style="text-indent: 4em;">054《inBooks》</p>
+								<p style="text-indent: 4em;">橄澜科技 《遇见名家》</p>
+								<p style="text-indent: 2em;">入围奖</p>
+								<p style="text-indent: 4em;">东方网 《追墨人》</p>
+								<p style="text-indent: 4em;">金橡树 《近代名人堂》</p>
+								<p style="text-indent: 4em;">SHU_VIZ_GROUP 《听说APP》</p>
+								<p style="text-indent: 4em;">数据Win8 《名人之光》</p>
+								<p style="text-indent: 4em;">星星点灯 《星星猎手》</p>
+								<hr>
+								<p style="text-indent: 2em;">最佳人气奖</p>
+								<p style="text-indent: 4em;">星星点灯 《星星猎手》</p>
+								<p style="text-indent: 2em;">人气奖</p>
+								<p style="text-indent: 4em;">00011011队 《时光掠影》</p>
+								<p style="text-indent: 4em;">哈尔滨商业大学图书馆 《上海图书馆名人手稿数据可视化平台》</p>
+								<p style="text-indent: 4em;">海思路一百号 《鲁迅的朋友圈》</p>
+								<p style="text-indent: 4em;">金橡树 《近代名人堂》</p>
+								<p style="text-indent: 4em;">上海蜜炬信息科技有限公司 《游.文化》</p>
+								<p style="text-indent: 4em;">SHU_VIZ_GROUP 《听说APP》</p>
+								<p style="text-indent: 4em;">数据Win8 《名人之光》</p>
+								<p>&nbsp;</p> 
+                            </div>
+                        </div>                                                   
+					</div>
+				</div>
+			</div>
+			<div class="modal fade bs-example-modal-lg" id="myModalNotice9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-top margin-bottom-40">
+                            </div>
+                            <div class="modal-bot g-heading-v7">
+                            	<h2 class="lead text-center" style="color: #FFF; word-break: break-all; word-wrap: break-word;">上海图书馆2017开放数据应用开发竞赛<br/>分享会通知<br/><small>2017.10.23</small></h2>
+								<p style="text-indent: 2em;">上海图书馆（上海科学技术情报研究所）、文化部公共文化研究上海图书馆基地去年成功举办了第一届开放数据应用开发竞赛，而今再次打开上图特藏，以更为宏富的名人手稿及档案关联开发数据，征集各类让人脑洞大开的应用。2017开放数据应用开发竞赛的开放数据内容为上图馆藏的24万余种手稿及档案的元数据，横跨19世纪初至20世纪末近两百年，是研究近现代历史、人文、经济、社会等问题的宝贵资料。</p>
+								<p style="text-indent: 2em;">经过5个月的激烈角逐，竞赛于9月落下帷幕，评选出了竞赛一等奖1名、二等奖2名、入围奖5名，以及最佳人气奖1名、人气奖7名。大数据、可视化、机器学习、众包等词汇成为决赛当天的一大亮点。</p>
+								<p style="text-indent: 2em;">我们将于10月24日至30日，在上海图书馆目录大厅举办2017开放数据应用开发竞赛展；并于10月27日在创·新空间举行此次竞赛作品分享会，旨在对此次竞赛成果、技术开发心得以及开放数据相关内容进行充分交流。</p>
+								<p style="text-indent: 2em;">欢迎各位参赛成员和对开放数据感兴趣的朋友前来报名参加！</p>
+								<p style="text-indent: 2em;">地点：上海图书馆创·新空间</p>
+								<p style="text-indent: 2em;">时间：10月27日 9:30-11:30（分享会）; 13:00参观展览</p>
+								<p style="text-indent: 2em;">联系电话：021-64281593（张老师）</p>
+								<p style="text-indent: 2em;">报名方式：填写附件报名表发至联系邮箱</p>
+								<p style="text-indent: 2em;">联系邮箱：<a href="mailto:zyzhang@libnet.sh.cn?subject=上海图书馆2017开放数据应用开发竞赛分享会报名">zyzhang@libnet.sh.cn</a></p>
+								<br/>
+								<p style="text-indent: 2em;"><strong>附件</strong></p>
+								<p style="text-align: center;">报名表</p>
+								<table class="table table-bordered" style="color: #FFF; max-width: 600px; margin: 0 auto;">
+							      <thead>
+							        <tr>
+							          <th>姓名</th>
+							          <th>单位</th>
+							          <th>电话</th>
+							        </tr>
+							      </thead>
+							      <tbody>
+							        <tr style="height: 30px;">							          
+							          <td></td>
+							          <td></td>
+							          <td></td>
+							        </tr>
+							        <tr style="height: 30px;">					          
+							          <td></td>
+							          <td></td>
+							          <td></td>
+							        </tr>
+							      </tbody>
+							    </table>
+								<p>&nbsp;</p> 
+                            </div>
+                        </div>                                                   
+					</div>
+				</div>
+			</div>
+			<div class="modal fade bs-example-modal-lg" id="myModalNotice10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-top margin-bottom-40">
+                            </div>
+                            <div class="modal-bot g-heading-v7">
+                            	<h2 class="lead text-center" style="color: #FFF; word-break: break-all; word-wrap: break-word;">欢迎前来参观上海图书馆2017开放数据应用开发竞赛展<br/><small>2017.10.24</small></h2>
+								<p style="text-indent: 2em;">上海图书馆2017开放数据应用开发竞赛展于10月24日正式开幕，展览将持续到10月30日。</p>
+								<p style="text-indent: 2em;">本次展览展出了竞赛详细情况，包括上海图书馆名人手稿与档案开放数据情况，以及八个获奖团队的参赛原因、作品构思、作品特点、活动收获等等。欢迎大家前来参观！</p>
+								<p style="text-indent: 2em;">如果想进一步了解这些获奖作品，或是对上海图书馆开放数据感兴趣，欢迎您前来参加10月27日上午的竞赛分享会！</p>
+								<p>&nbsp;</p> 
+								<p style="text-align: center;"><a href="http://pcrc.library.sh.cn/image/zt/opendata/20171024.jpg"><img src="http://pcrc.library.sh.cn/image/zt/opendata/20171024.jpg" /></a></p>
+								<p>&nbsp;</p> 
+                            </div>
+                        </div>                                                   
+					</div>
+				</div>
+			</div>
+			<!-- modal 培训资料 -->
+			<div class="modal fade bs-example-modal-lg" id="myModal-pxzl" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times"></i></button>
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-top margin-bottom-40">
+                            </div>
+                            <div class="modal-bot g-heading-v7">
+                                <h2 class="lead text-center" style="color: #FFF;">培训资料<br><small>上海图书馆2017开放数据应用开发竞赛</small></h2>                               
+                                <p style="text-indent: 0em;font-size:16px;">培训文档：</p> 
+                                <p style="text-indent: 2em;font-size:16px;"><a href="doc/1.开放数据应用大赛.pdf" target="_blank">1.开放数据应用大赛.pdf</a></p>  
+                                <p style="text-indent: 2em;font-size:16px;"><a href="doc/2.竞赛规则&提交要求.pdf" target="_blank">2.竞赛规则&提交要求.pdf</a></p>   
+                                <p style="text-indent: 2em;font-size:16px;"><a href="doc/3.名人手稿及档案关联开放数据——内容及结构.pdf" target="_blank">3.名人手稿及档案关联开放数据——内容及结构.pdf</a></p>   
+                                <p style="text-indent: 2em;font-size:16px;"><a href="doc/4.RDF数据生成与转换工具介绍.pdf" target="_blank">4.RDF数据生成与转换工具介绍.pdf</a></p>   
+                                <p style="text-indent: 2em;font-size:16px;"><a href="doc/5.关联数据查询语言SPARQL实战.pdf" target="_blank">5.关联数据查询语言SPARQL实战.pdf</a></p>   
+                                <p style="text-indent: 2em;font-size:16px;"><a href="doc/6.手稿开放数据接口说明.pdf" target="_blank">6.手稿开放数据接口说明.pdf</a></p>   
+                                <p style="text-indent: 2em;font-size:16px;"><a href="doc/2017年上海图书馆开放数据应用开发竞赛API说明书.pdf" target="_blank">2017年上海图书馆开放数据应用开发竞赛API说明书.pdf</a></p>     
+                                <br />
+                                <p style="text-indent: 0em;font-size:16px;">培训视频：</p> 
+                                <p style="text-indent: 2em;font-size:16px;"><a href="http://library.gensee.com/webcast/site/vod/play-56efdfd9fb4b4051aad9b007511fb240" target="_blank">集体讲解部分</a></p>
+                                <p style="text-indent: 2em;font-size:16px;"><a href="http://library.gensee.com/webcast/site/vod/play-5de2d27da63b4046ba60b043a09cfa6a" target="_blank">讨论交流部分</a></p>                                                        
+                            </div>
+                        </div>                                                   
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!--End of Projects Section-->
+
+	<!--开放数据内容 Section-->
+	<section id="opendata">
+		<div class="container-fluid bg-color-com team-section">
+			<div class="container content-md g-heading-v7 text-center g-mb-70">
+				<h2 class="h2 g-mb-70 g-color-white"><em class="block-name">Open Data</em> 开放数据内容</h2>
+				<p class="g-color-white-darker" style="text-indent: 2em;text-align:left;">本次开放数据内容为上海图书馆馆藏的24万余种手稿及档案的元数据。包括私人信函电报12万余通，珍贵的创作手稿1万7千余种，谕旨奏折公牍条约1万4千余种，合同章程4千余种，照片及音像资料1万8千余种，等等。涉及名人近5万、地点2千余个。</p>
+                <p class="g-color-white-darker" style="text-indent: 2em;text-align:left;">本次竞赛必须以上海图书馆名人手稿及档案开放数据为基础，使用多少，如何使用都不做限制，尤其欢迎融合上海图书馆以外的开放数据，或与其他机构提供的数据服务进行整合。</p>
+			</div>
+		</div>
+	</section>
+	<!--End of 开放数据内容 Section-->
+
+	<!--联系我们 Section-->
+	<section id="contact">
+		<div class="container content-md g-heading-v7 text-center">
+			<h2 class="h2 g-mb-70"><em class="block-name">Contact us</em> 联系我们</h2>
+
+			<!-- form and contatc information -->
+			<div class="row">
+				<!--<div class="col-md-9 col-sm-6 form no-side-padding">
+					
+				</div>-->
+				<div class="col-md-12 col-sm-12 contact-list">
+					<p>张老师<br/>上海图书馆（上海科学技术情报研究所）</p>
+
+					<ul class="list-unstyled margin-bottom-30">
+						<li><span aria-hidden="true" class="icon-call-in icon"></span></li>
+						<li class="first-item">电话</li>
+						<li class="second-item"><a href="tel:021-64334749">021-64281593</a></li>
+					</ul>
+					<ul class="list-unstyled margin-bottom-30">
+						<li><span aria-hidden="true" class="icon-envelope-open icon"></span></li>
+						<li class="first-item">电子邮箱</li>
+						<li class="second-item"><a href="mailto:zyzhang@libnet.sh.cn">zyzhang@libnet.sh.cn</a></li>
+						<li class="second-item"><p>欢迎有意组队参赛的个人或团队函询</p></li>
+					</ul>
+                    
+                   
+                    <p><img src="assets/img/weixin2.png" width="200"/></p>
+                    <p>文化部公共文化研究上海图书馆基地官方微信</p>
+                    <p><img src="assets/img/weixin3.png" width="200"/></p>
+                    <p>文化部公共文化研究上海图书馆基地官方微博</p>
+                    
+                    <p><a type="button" class="btn-u btn-u-lg btn-u-bg-default btn-u-upper" href="http://pcrc.library.sh.cn/" target="_self"> 返回&nbsp;&nbsp;文化部公共文化研究基地（上海）&nbsp;&nbsp;首页</button></a>
+
+					<!-- <ul class="list-unstyled margin-bottom-30">
+						<li><span aria-hidden="true" class="icon-earphones-alt icon"></span></li>
+						<li class="first-item">Toll Free</li>
+						<li class="second-item">+4586 802 4581</li>
+					</ul> -->
+				</div>
+			</div>
+		</div>
+		<!-- copyrights -->
+		<div class="copyrights container-fluid bg-color-com page-scroll">
+			<div clas="container">
+				<a class="footer-logo" href="#body">
+					<img class="img-responsive" src="assets/img/logo-light.png" alt="Logo">
+				</a>
+                <div class="info">
+                <br/>. All rights reserved.
+                <br/>© copyright 2017 文化部公共文化研究基地（上海）                
+                </div>
+			</div>
+		</div>
+	</section>
+	<!--End of 联系我们 Section-->
+
+	<!-- JS Global Compulsory -->
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+	<script src="../../assets/plugins/jquery/jquery-migrate.min.js"></script>
+	<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- JS Implementing Plugins -->
+	<script src="../../assets/plugins/smoothScroll.js"></script>
+	<script src="../../assets/plugins/jquery.easing.min.js"></script>
+	<script src="../../assets/plugins/pace/pace.min.js"></script>
+	<script src="../../assets/plugins/modernizr.js"></script>
+	<script src="../../assets/plugins/backstretch/jquery.backstretch.min.js"></script>
+
+	<!-- JS Page Level-->
+	<script src="../../assets/js/one.app.js"></script>
+	<script src="assets/js/plugins/pace-loader.js"></script>
+	<script src="assets/js/plugins/promo.js"></script>
+	<script src="assets/js/pnotify.custom.js"></script>
+	<script>
+		$(function() {
+			App.init();			
+		});
+		var stack_bottomright = {"dir1": "up", "dir2": "left", "firstpos1": 25, "firstpos2": 25};
+		function show_stack_bottomright_notice20170426() {
+			var opts = {
+				title: '竞赛 “名人手稿及档案数据本体”已发布',
+				text: '<a href="http://sg.library.sh.cn/ontology/view" target="_blank" class="btn-u btn-u-lg btn-u-bg-default " style="float:right; cursor: pointer; letter-spacing: 2px; background: #3399FF; font-size:14px; font-weight: bold; white-space: normal; word-break: break-word; word-wrap: break-word; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; -moz-box-shadow:2px 2px 5px #333333; -webkit-box-shadow:2px 2px 5px #333333; box-shadow:2px 2px 5px #333333;">前往查看</a>',
+				hide: false,
+				buttons: {
+					closer: true,
+					sticker: false,
+					closer_hover: false
+				},				
+				addclass: "stack-bottomright",
+				stack: stack_bottomright
+			};			
+			var notice20170426 = new PNotify(opts);
+			notice20170426.get().click(function() {
+				notice20170426.remove();
+			});
+		}
+		
+		function show_stack_bottomright_notice20170427() {
+			var opts = {
+				title: '5.10号竞赛培训日程',
+				text: '<p>本次培训支持现场直播</p><a href="http://pcrc.library.sh.cn/newsArticle_13.html" target="_blank" class="btn-u btn-u-lg btn-u-bg-default " style="float:right; cursor: pointer; letter-spacing: 2px; background: #3399FF; font-size:14px; font-weight: bold; white-space: normal; word-break: break-word; word-wrap: break-word; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; -moz-box-shadow:2px 2px 5px #333333; -webkit-box-shadow:2px 2px 5px #333333; box-shadow:2px 2px 5px #333333;">前往查看</a>',
+				hide: false,
+				buttons: {
+					closer: true,
+					sticker: false,
+					closer_hover: false
+				},				
+				addclass: "stack-bottomright",
+				stack: stack_bottomright
+			};			
+			var notice20170427 = new PNotify(opts);
+			notice20170427.get().click(function() {
+				notice20170427.remove();
+			});
+		}
+
+		function show_stack_bottomright_notice20170720() {
+			var opts = {
+				title: '2017开放数据应用开发竞赛新增人气奖',
+				text: '<p>最新消息！为了激发大家的创作热情、提高参与度、聚集更多人气，除本次竞赛设置的一等奖、二等奖及入围奖之外，主办方还将增设人气奖评选活动。该评选活动将于微信平台上由大众投票产出。具体奖项评选规则将于8月中下旬在竞赛官网公布，请大家密切关注！</p>',
+				hide: false,
+				buttons: {
+					closer: true,
+					sticker: false,
+					closer_hover: false
+				},				
+				addclass: "stack-bottomright",
+				stack: stack_bottomright
+			};			
+			var notice20170720 = new PNotify(opts);
+			notice20170720.get().click(function() {
+				notice20170720.remove();
+			});
+		}
+
+		function show_stack_bottomright_notice20171024() {
+			var opts = {
+				title: '欢迎前来参观上海图书馆2017开放数据应用开发竞赛展',
+				text: '<p>上海图书馆2017开放数据应用开发竞赛展于10月24日正式开幕，展览将持续到10月30日。<br/><a href="#" data-toggle="modal" data-target="#myModalNotice10" class="btn-u btn-u-lg btn-u-bg-default " style="float:right; cursor: pointer; letter-spacing: 2px; background: #3399FF; font-size:14px; font-weight: bold; white-space: normal; word-break: break-word; word-wrap: break-word; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; -moz-box-shadow:2px 2px 5px #333333; -webkit-box-shadow:2px 2px 5px #333333; box-shadow:2px 2px 5px #333333;">查看详情</a></p>',
+				hide: false,
+				buttons: {
+					closer: true,
+					sticker: false,
+					closer_hover: false
+				},				
+				addclass: "stack-bottomright",
+				stack: stack_bottomright
+			};			
+			var notice20171024 = new PNotify(opts);
+			notice20171024.get().click(function() {
+				notice20171024.remove();
+			});
+		}
+		//show_stack_bottomright_notice20170427();
+		//show_stack_bottomright_notice20170426();
+		//show_stack_bottomright_notice20170720();
+		//show_stack_bottomright_notice20171024();
+		/*function countDown(){
+			// 给日期类对象添加日期差方法，返回日期与diff参数日期的时间差，单位为天
+			Date.prototype.diff = function(date){
+			  return (this.getTime() - date.getTime())/(24 * 60 * 60 * 1000);
+			}
+			// 构造两个日期，分别是系统时间和2013/04/08 12:43:45
+			var now = new Date();
+			var date = new Date('2017/05/01 00:00:00');
+			// 调用日期差方法，求得参数日期与系统时间相差的天数
+			var diff = date.diff(now);
+			// 打印日期差
+			console.log(diff);
+			return Math.ceil(diff) ;
+		}
+		var tmpcountdown = countDown();
+		if(tmpcountdown*1>0){
+			$("#countDown").html("开放报名 距离报名截止还剩 "+tmpcountdown+" 天！");
+		}else{
+			$("#countDown").html("报名已截至").parent("a").attr("disabled",true).attr("href","#").css("display","none");
+			$("#enterBtn").html("报名已截至").css("display","none").parents("a").attr("disabled",true).removeAttr("href").removeAttr("target").css("cursor","default");
+		}	*/	
+	</script>
+	<!--[if lt IE 10]>
+	  <script src="../../assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+	<![endif]-->
+</body>
+</html>
