@@ -7,7 +7,7 @@ body, html, #locationmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
 </style>
 <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=YWdGplhYjUGQ3GtpKNeuTM2S"></script>
-<script type="text/javascript" src="http://api.map.baidu.com/library/LuShu/1.2/src/LuShu_min.js"></script>
+
 <title>读者到馆记录-百度地图版</title>
 </head>
 <body>
@@ -145,35 +145,7 @@ function searchroute(){
                 setZoom(pointsARR);                
                 
                 map.addOverlay(marker);
-                
 
-                /*
-                lushu = new BMapLib.LuShu(map,pointsARR,{
-
-                defaultContent:"TonyQ",//"从天安门到百度大厦"
-
-                autoView:true,//是否开启自动视野调整，如果开启那么路书在运动过程中会根据视野自动调整
-
-                icon  : new BMap.Icon('image/hightTrain.png', new BMap.Size(48,48),{anchor : new BMap.Size(48, 48)}),
-
-                speed: 1000,
-
-                enableRotation:true,//是否设置marker随着道路的走向进行旋转
-
-                   landmarkPois:[
-
-                   {lng:116.306954,lat:40.05718,html:'加油站',pauseTime:2}
-
-                  ]
-
-                    
-
-                });  
-                lushu.start();
-                */
-
-
-                //map.panTo(centerPoint);
                 play();                     
                 
             } 
