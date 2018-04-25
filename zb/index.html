@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css">
+body, html, #locationmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+</style>
+<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=YWdGplhYjUGQ3GtpKNeuTM2S"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/LuShu/1.2/src/LuShu_min.js"></script>
+<title>读者到馆记录-百度地图版</title>
+</head>
+<body>
+<div style="position: absolute; right: 0; bottom: 0; z-index: 999999;">
+    <button style="padding: 5px 10px;" id="playBtn">暂&nbsp;停</button>
+</div>
+<div id="locationmap">
+</div>
+<script type="text/javascript">
+var city = "上海";
+var map = new BMap.Map("locationmap"); // 百度地图API功能
+map.centerAndZoom(city, 14); // 设置地图显示的城市和地图级别
+map.enableScrollWheelZoom(); // 启用滚轮放大缩小，默认禁用
+map.enableContinuousZoom(); // 启用地图惯性拖拽，默认禁用
+map.addControl(new BMap.NavigationControl()); // 添加默认缩放平移控件
+map.addControl(new BMap.ScaleControl()); // 添加比例尺控件
+map.addControl(new BMap.MapTypeControl()); // 添加地图类型控件
+map.addControl(new BMap.OverviewMapControl()); // 添加缩略地图控件
+var INDEX = 0;
+var DRIVE_INDEX = 0;
+var T;//循环控制器
+
+var result = [
+    {
+        "id": "1",
+        "address": "上海图书馆",
+        "userid": "a1",
+        "longitude": "121.451271",
+        "latitude": "31.214195",
+        "datetime": "2017.1.10"
+    },
+    {
+        "id": "2",
+        "address": "中科院上海生命科学图书馆",
+        "userid": "a2",
+        "longitude": "121.459718",
+        "latitude": "31.207819",
+        "datetime": "2017.5.2"
+    },
+    {
+        "id": "3",
+        "address": "上海少年儿童图书馆",
+        "userid": "a3",
+        "longitude": "121.465027",
+        "latitude": "31.235878",
+        "datetime": "2017.10.1"
+    },
+    {
+        "id": "4",
+        "address": "宝山区图书馆",
+        "userid": "a4",
+        "longitude": "121.496514",
+        "latitude": "31.401327",
+        "datetime": "2017.12.1"
+    }
+];
+map.clearOverlays();// 清除标注信息
+var points = [];// 原始点
+var routepoints = [];//路径点
+//计算、生成所有路径点
+$(result).each(function(i,e){
+    console.log(e);
+    var longitude = e.longitude;// 经度
+    var latitude = e.latitude;// 纬度
+    var point = new BMap.Point(longitude, latitude);// 填充标注点
+    points.push(point);
+});
+console.log("原始点", points);
+
+var driveIndex = 0;
+var playIndex = 0;
+var SPEED = 200;
+
+//根据经纬极值计算绽放级别。
+function getZoom (maxLng, minLng, maxLat, minLat) {
+    var zoom = ["50","100","200","500","1000","2000","5000","10000","20000","25000","50000","100000","200000","500000","1000000","2000000"]//级别18到3。
+    var pointA = new BMap.Point(maxLng,maxLat);  // 创建点坐标A
+    var pointB = new BMap.Point(minLng,minLat);  // 创建点坐标B
+    var distance = map.getDistance(pointA,pointB).toFixed(1);  //获取两点距离,保留小数点后两位
+    for (var i = 0,zoomLen = zoom.length; i < zoomLen; i++) {
+        if(zoom[i] - distance > 0){
+            return 18-i+3;//之所以会多3，是因为地图范围常常是比例尺距离的10倍以上。所以级别会增加3。
+        }
+    };
+}
+//根据原始数据计算中心坐标和缩放级别，并为地图设置中心坐标和缩放级别。
+function setZoom(points){
+    if(points.length>0){
+        var maxLng = points[0].lng;
+        var minLng = points[0].lng;
+        var maxLat = points[0].lat;
+        var minLat = points[0].lat;
+        var res;
+        for (var i = points.length - 1; i >= 0; i--) {
+            res = points[i];
+            if(res.lng > maxLng) maxLng =res.lng;
+            if(res.lng < minLng) minLng =res.lng;
+            if(res.lat > maxLat) maxLat =res.lat;
+            if(res.lat < minLat) minLat =res.lat;
+        };
+        var cenLng =(parseFloat(maxLng)+parseFloat(minLng))/2;
+        var cenLat = (parseFloat(maxLat)+parseFloat(minLat))/2;
+        var zoom = getZoom(maxLng, minLng, maxLat, minLat);
+        console.log("zoom",zoom);
+        map.centerAndZoom(new BMap.Point(cenLng,cenLat), zoom);  
+    }else{
+        //没有坐标，显示全中国
+        map.centerAndZoom(new BMap.Point(103.388611,35.563611), 5);  
+    } 
+}
+
+BMapLib.LuShu.prototype._move=function(initPos,targetPos,effect){var pointsArr=[initPos,targetPos];var me=this,currentCount=0,timer=10,step=this._opts.speed/(1000/timer),init_pos=this._projection.lngLatToPoint(initPos),target_pos=this._projection.lngLatToPoint(targetPos),count=Math.round(me._getDistance(init_pos,target_pos)/step);this._map.addOverlay(new BMap.Polyline(pointsArr,{strokeColor:"#111",strokeWeight:5,strokeOpacity:0.5}));if(count<1){me._moveNext(++me.i);return}me._intervalFlag=setInterval(function(){if(currentCount>=count){clearInterval(me._intervalFlag);if(me.i>me._path.length){return}me._moveNext(++me.i)}else{currentCount++;var x=effect(init_pos.x,target_pos.x,currentCount,count),y=effect(init_pos.y,target_pos.y,currentCount,count),pos=me._projection.pointToLngLat(new BMap.Pixel(x,y));if(currentCount==1){var proPos=null;if(me.i-1>=0){proPos=me._path[me.i-1]}if(me._opts.enableRotation==true){me.setRotation(proPos,initPos,targetPos)}if(me._opts.autoView){if(!me._map.getBounds().containsPoint(pos)){me._map.setCenter(pos)}}}me._marker.setPosition(pos);me._setInfoWin(pos)}},timer)};
+var marker = new BMap.Marker(points[0],{
+    icon  : new BMap.Icon('image/hightTrain.png', new BMap.Size(48,48),{anchor : new BMap.Size(48, 48)})
+});
+var label = new BMap.Label("TonyQ",{offset:new BMap.Size(0,-30)});
+label.setStyle({border:"1px solid rgb(204, 204, 204)",color: "rgb(0, 0, 0)",borderRadius:"10px",padding:"5px",background:"rgb(255, 255, 255)",});
+marker.setLabel(label);
+
+
+function searchroute(){
+    addMarker(points[playIndex], map, result[playIndex]["address"]);
+    //var map = new BMap.Map("locationmap"); 
+    //map.centerAndZoom(points[playIndex], 14); 
+    var options = { 
+        //renderOptions: {map:map,autoViewport: true},
+        onSearchComplete: function(results){  
+            if (driving.getStatus() == BMAP_STATUS_SUCCESS){ 
+                var pointsARR = results.getPlan(0).getRoute(0).getPath();   
+                //pointsARR.unshift(points[playIndex]);
+                //pointsARR.push(points[playIndex+1]);      
+                routepoints.push(pointsARR);   
+                console.log(routepoints); 
+                SPEED = 5000/pointsARR.length;
+                setZoom(pointsARR);                
+                
+                map.addOverlay(marker);
+                
+
+                /*
+                lushu = new BMapLib.LuShu(map,pointsARR,{
+
+                defaultContent:"TonyQ",//"从天安门到百度大厦"
+
+                autoView:true,//是否开启自动视野调整，如果开启那么路书在运动过程中会根据视野自动调整
+
+                icon  : new BMap.Icon('image/hightTrain.png', new BMap.Size(48,48),{anchor : new BMap.Size(48, 48)}),
+
+                speed: 1000,
+
+                enableRotation:true,//是否设置marker随着道路的走向进行旋转
+
+                   landmarkPois:[
+
+                   {lng:116.306954,lat:40.05718,html:'加油站',pauseTime:2}
+
+                  ]
+
+                    
+
+                });  
+                lushu.start();
+                */
+
+
+                //map.panTo(centerPoint);
+                play();                     
+                
+            } 
+        } 
+    }; 
+    var driving = new BMap.DrivingRoute(map, options);
+    var start = points[playIndex];
+    var end = points[playIndex+1];
+    console.log("playIndex", playIndex);
+    driving.search(start, end);
+};
+searchroute();
+
+function play() {    
+    console.log(playIndex,driveIndex,SPEED);
+    //label.setContent("经度: " + routepoints[playIndex][driveIndex+1].lng + "<br>纬度: " + routepoints[playIndex][driveIndex+1].lat);
+    if(true){
+        marker.setPosition(routepoints[playIndex][driveIndex]);
+        map.addOverlay(new BMap.Polyline([routepoints[playIndex][driveIndex], routepoints[playIndex][driveIndex+1]], {strokeWeight: 5, strokeOpacity: 1}));
+    }
+    
+    if(driveIndex < routepoints[playIndex].length-2) {
+        driveIndex++;
+        timer = window.setTimeout("play()", SPEED);
+    } else {
+        //map.panTo(routepoints[i][driveIndex+1]);
+        if(playIndex<points.length-2){
+            playIndex++;            
+            driveIndex = 0;
+            searchroute();
+        }else{
+            playIndex++;
+            addMarker(points[playIndex], map, result[playIndex]["address"]);
+            console.log("动画完毕！！！");
+            $("#playBtn").html('开&nbsp;始');
+            playIndex = 0;            
+            driveIndex = 0;
+            //searchroute();      
+        }
+    }
+}
+
+
+
+
+function pause(){
+    if(timer&&playIndex>0){        
+        $("#playBtn").html('开&nbsp;始');
+        timer = window.clearInterval(timer);        
+    }else if(timer&&playIndex==0){
+        map.clearOverlays(); 
+        searchroute();    
+    }else{
+        $("#playBtn").html('暂&nbsp;停');
+        play();
+    }   
+}
+
+$("#playBtn").on("click",function(){
+    pause();
+})
+//编写自定义函数,创建标注
+function addMarker(point, map, tips) 
+{
+    var marker = new BMap.Marker(point);
+    map.addOverlay(marker);
+    //为标注添加文字信息
+    var label = new BMap.Label(tips,{offset:new BMap.Size(-30,-30)});
+    label.setStyle({border:"1px solid rgb(204, 204, 204)",color: "rgb(0, 0, 0)",borderRadius:"10px",padding:"5px",background:"rgb(255, 255, 255)",});
+    marker.setLabel(label);
+}
+</script>
+</body>
+</html>
